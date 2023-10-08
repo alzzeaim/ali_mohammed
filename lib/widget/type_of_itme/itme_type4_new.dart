@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 class ItmeType4New extends StatelessWidget {
   String decItme;
-  String URL3;
+  final URL3;
   VoidCallback nextPage;
+  bool isNew;
   ItmeType4New({
     super.key,
     required this.URL3,
     required this.decItme,
     required this.nextPage,
+    required this.isNew,
   });
 
   @override
@@ -45,28 +47,33 @@ class ItmeType4New extends StatelessWidget {
                 width: 2,
               ),
             ),
-            child: Container(
-              // width: 20,
-              // height: 20,
-              margin: EdgeInsets.only(
-                left: 10,
-                top: 10,
-              ),
-              padding: const EdgeInsets.symmetric(
-                horizontal: 4,
-                vertical: 2,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.redAccent,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: const Text(
-                "جديد",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 10,
-                ),
-              ),
+            child: Column(
+              children: [
+                if (isNew)
+                  Container(
+                    // width: 20,
+                    // height: 20,
+                    margin: EdgeInsets.only(
+                      left: 10,
+                      top: 10,
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 4,
+                      vertical: 2,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.redAccent,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: const Text(
+                      "جديد",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
+                      ),
+                    ),
+                  ),
+              ],
             ),
           ),
           Padding(

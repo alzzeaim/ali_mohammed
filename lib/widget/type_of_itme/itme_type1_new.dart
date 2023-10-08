@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_alli_mohammed_hassan/widget/Video_series.dart';
 
 class ItmeType1New extends StatelessWidget {
   // String titleItme;
   String decItme;
   int numItme;
   IconData iconsItme;
-  String URL2;
+  final URL2;
   VoidCallback nextPage;
+  bool isNew;
   ItmeType1New({
     super.key,
     required this.iconsItme,
@@ -16,6 +16,7 @@ class ItmeType1New extends StatelessWidget {
     required this.URL2,
     required this.decItme,
     required this.nextPage,
+    required this.isNew,
   });
 
   @override
@@ -23,7 +24,6 @@ class ItmeType1New extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         nextPage();
-       
       },
       child: Container(
         margin: const EdgeInsets.symmetric(
@@ -56,6 +56,7 @@ class ItmeType1New extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
+                          if(isNew)
                           Container(
                             padding: const EdgeInsets.symmetric(
                               horizontal: 4,
@@ -66,7 +67,7 @@ class ItmeType1New extends StatelessWidget {
                               borderRadius: BorderRadius.circular(15),
                             ),
                             child: const Text(
-                              "NEW",
+                              "جديد",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 10,

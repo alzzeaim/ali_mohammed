@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/Articles_file/next_articels.dart';
 
-import '../../widget/Video_series.dart';
 import '../../widget/type_of_itme/itme_type3_new.dart';
 
 class RecentlyAddedArticles extends StatelessWidget {
@@ -14,14 +16,15 @@ class RecentlyAddedArticles extends StatelessWidget {
         child: Stack(
           children: [
             ItmeType3New(
+              isNew: true,
               numItme: 15,
-              URL3: "assets/images/arc1.png",
+              URL3: imageMeneger.image2,
               decItme:
-                  "أذكار النوم الصحيحة أذكار النوم الصحيحة  أذكار النوم الصحيحة ",
+                 MyText.title4 ,
               nextPage: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => VideoSeries(),
+                    builder: (context) => NextArticles(),
                   ),
                 );
               },

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 
 import '../../../widget/Video_series.dart';
 import '../../widget/type_of_itme/itme_type5_new.dart';
@@ -15,9 +17,10 @@ class RecentlyAddedBooks extends StatelessWidget {
           child: Stack(
             children: [
               ItmeType5New(
-                URL3: "assets/images/book1.png",
+                isNew: true,
+                URL3:imageMeneger.image5,
                 decItme:
-                    "الآثار العقدية الواردة عن الخلفاء الراشدين  الأربعة تنسيق 7-4-2022 (1)",
+                   MyText.title8,
                 nextPage: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 
 import '../../../../widget/Video_series.dart';
 import '../../widget/type_of_itme/itme_type4_new.dart';
@@ -14,7 +16,11 @@ class RecentlyAddedReligious extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            ItmeType4New(URL3: "assets/images/dorerr1.png", decItme: "يتحقق تعظيم الله تعالى بإثبات صفاته  له كما يليق به  له كما يليق به", nextPage: () {
+            ItmeType4New(
+              isNew: true,
+              URL3: imageMeneger.image6, 
+              decItme: MyText.title18,
+               nextPage: () {
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => VideoSeries(),

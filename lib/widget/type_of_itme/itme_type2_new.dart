@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class ItmeType2New extends StatelessWidget {
   VoidCallback nextPage;
   String title;
+  bool isNew;
   ItmeType2New({
     super.key,
     required this.title,
     required this.nextPage,
+    required this.isNew,
   });
 
   @override
@@ -29,6 +31,7 @@ class ItmeType2New extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                if(isNew)
                 Container(
                   margin: EdgeInsets.only(left: 10),
                   padding: const EdgeInsets.symmetric(

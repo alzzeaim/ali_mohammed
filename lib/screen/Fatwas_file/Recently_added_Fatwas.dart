@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../../../../widget/Video_series.dart';
-import '../../widget/type_of_itme/itme_type2_new.dart';
-
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/Fatwas_file/next_fatwas.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/type_of_itme/itme_type2_new.dart';
 
 
 class RecentlyAddedFatwas extends StatelessWidget {
@@ -16,12 +15,13 @@ class RecentlyAddedFatwas extends StatelessWidget {
         child: Stack(
           children: [
             ItmeType2New(
+              isNew: true,
               title:
-                  "هل تسوية الصفوف في صلاة الجماعة واجبة ، بمعنى  أن المصلين يأثمون إذا لم يسووا الصفوف ؟",
+                  MyText.title17,
               nextPage: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => VideoSeries(),
+                    builder: (context) => NextFatwas(),
                   ),
                 );
               },

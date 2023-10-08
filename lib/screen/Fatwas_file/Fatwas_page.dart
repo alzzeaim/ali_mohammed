@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Fatwas_file/Recently_added_Fatwas.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/app_bar_actions.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/app_bar_title.dart';
@@ -20,7 +21,7 @@ class _FatwasPageState extends State<FatwasPage> {
     return Scaffold(
       appBar: AppBar(
         leading: SizedBox(),
-        title: AppBarTitle(titel: "الفتاوى"),
+        title: AppBarTitle(titel:MyText.title9),
         actions: [
           AppBarActions(backPage: () {
             Navigator.of(context).push(
@@ -33,8 +34,8 @@ class _FatwasPageState extends State<FatwasPage> {
       ),
       // body: SafeArea(child: Text("Fatwas_page")),
       body: TabBarPage(
-        tap11: "المضاف مؤاخراً",
-        tap22: "الفتاوى",
+        tap11: MyText.text_general1,
+        tap22: MyText.title9,
         page1: RecentlyAddedFatwas(),
         page2: Fatwas(),
       ),

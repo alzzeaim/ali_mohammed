@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../../../widget/Video_series.dart';
-import '../../widget/type_of_itme/itme_type1.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/voice_file/next_voice.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/type_of_itme/itme_type1_new.dart';
 
 
 class Voices extends StatelessWidget {
@@ -14,18 +15,19 @@ class Voices extends StatelessWidget {
         body: SafeArea(
           child: Stack(
             children: [
-              ItmeType1(
+              ItmeType1New(
+                  isNew: false,
                   nextPage: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => VideoSeries(),
+                        builder: (context) => NextVoice(),
                       ),
                     );
                   },
-                  iconsItme1: Icons.mic_none_rounded,
-                  numItme1: 29,
-                  URL1: "assets/images/voice1.png",
-                  decItme1: "روائع ابن القيم رحمه الله"),
+                  iconsItme: Icons.mic_none_rounded,
+                  numItme: 29,
+                  URL2: imageMeneger.image2,
+                  decItme:MyText.title30),
             ],
           ),
         ));

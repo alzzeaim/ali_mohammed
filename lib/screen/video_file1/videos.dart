@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/video_file1/next_video.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/type_of_itme/itme_type1_new.dart';
 
 import '../../../widget/Video_series.dart';
-import '../../widget/type_of_itme/itme_type1.dart';
 
 class Videos extends StatelessWidget {
   const Videos({Key? key}) : super(key: key);
@@ -12,19 +15,20 @@ class Videos extends StatelessWidget {
         backgroundColor: const Color.fromRGBO(238, 237, 232, 1),
         body: SafeArea(
             child: Stack(children: [
-          ItmeType1(
+          ItmeType1New(
+              isNew: false,
               nextPage: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => VideoSeries(),
+                    builder: (context) => NextVideo(),
                   ),
                 );
               },
-              iconsItme1: Icons.videocam_outlined,
-              numItme1: 20,
-              URL1: "assets/images/video1.png",
-              decItme1:
-                  "الفوائد العلمية المطرية في التعليقات على الأربعين النووية "),
+              iconsItme: Icons.videocam_outlined,
+              numItme: 20,
+              URL2:imageMeneger.image5,
+              decItme:
+                 MyText.title24),
         ])));
   }
 }

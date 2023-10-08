@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../screen/homePage.dart';
-
-class AppBarActions extends StatelessWidget {
-  VoidCallback backPage;
-  AppBarActions({super.key, required this.backPage});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
+AppBar myAppBar({required String tilte,String? textBack,required VoidCallback backPage,}) {
+  return AppBar(
+    actions: [
+      GestureDetector(
       onTap: () {
         backPage();
       },
@@ -34,7 +29,9 @@ class AppBarActions extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
+    ),
+    ],
+    
 
+  );
+}

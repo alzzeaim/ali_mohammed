@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
+
+
+AppBar myAppBar({String? title, String? image}) {
+  return AppBar(
+    title: title!.isNotEmpty ? Text(title) : Image.asset(image!),
+  );
+}
+
 class AppBarTitle extends StatelessWidget {
   final titel;
-  const AppBarTitle({
-    super.key,required this.titel
-  });
+  const AppBarTitle({super.key, required this.titel});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +21,7 @@ class AppBarTitle extends StatelessWidget {
       child: Center(
         child: Text(
           titel,
+          textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.grey,
             fontSize: 16,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SliderImages extends StatelessWidget {
-  String URL;
+  final URL;
    SliderImages({
     super.key,required this.URL,
   });
