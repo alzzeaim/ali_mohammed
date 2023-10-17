@@ -138,7 +138,7 @@ class _HomePageState extends State<HomePage> {
           );
         }
       },
-       {
+      {
         // CallUs
         'name': MyText.title39,
         'icon': Icons.phone_in_talk_outlined,
@@ -166,8 +166,7 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
-                      child:
-                          Image(image: AssetImage(imageMeneger.image1))),
+                      child: Image(image: AssetImage(imageMeneger.image1))),
                 ),
               ),
               ListView.builder(
@@ -180,10 +179,6 @@ class _HomePageState extends State<HomePage> {
                       movePage: mapdrawer[index]["fun"]);
                 },
               ),
-
-            
-              
-              
             ],
           ),
         ),
@@ -249,7 +244,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         CategoriesHomePage(
                           iconn: Icons.mic_none,
-                          name_cato:MyText.title29,
+                          name_cato: MyText.title29,
                           newPage: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
@@ -260,7 +255,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         CategoriesHomePage(
                           iconn: Icons.videocam_outlined,
-                          name_cato:MyText.title23,
+                          name_cato: MyText.title23,
                           newPage: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
@@ -275,7 +270,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         CategoriesHomePage(
                           iconn: Icons.phone_outlined,
-                          name_cato:MyText.title39,
+                          name_cato: MyText.title39,
                           newPage: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
@@ -312,7 +307,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         CategoriesHomePage(
                           iconn: Icons.book_outlined,
-                          name_cato:MyText.title5,
+                          name_cato: MyText.title5,
                           wi: 235,
                           newPage: () {
                             Navigator.of(context).push(
@@ -325,7 +320,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         CategoriesHomePage(
                           iconn: Icons.insert_drive_file_outlined,
-                          name_cato: MyText.title23,
+                          name_cato: MyText.title19,
                           newPage: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(

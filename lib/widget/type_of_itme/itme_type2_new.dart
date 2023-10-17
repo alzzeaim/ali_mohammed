@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
 class ItmeType2New extends StatelessWidget {
   VoidCallback nextPage;
@@ -13,25 +15,21 @@ class ItmeType2New extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        nextPage();
-      },
-      child: Container(
-        margin: EdgeInsets.only(top: 20),
-        width: double.infinity,
-        height: 120,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: Row(
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                if(isNew)
+    return Container(
+      margin: EdgeInsets.only(top: 20),
+      width: double.infinity,
+      height: 120,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: Row(
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (isNew)
                 Container(
                   margin: EdgeInsets.only(left: 10),
                   padding: const EdgeInsets.symmetric(
@@ -42,18 +40,19 @@ class ItmeType2New extends StatelessWidget {
                     color: Colors.redAccent,
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  child: const Text(
-                    "جديد",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
-                    ),
+                  child: Text(
+                    MyText.textGeneral,
+                    style: MyTextStyle.style17,
                   ),
                 ),
-                SizedBox(
-                  height: 50,
-                ),
-                Container(
+              SizedBox(
+                height: 50,
+              ),
+              GestureDetector(
+                onTap: () {
+                  nextPage();
+                },
+                child: Container(
                   height: 40,
                   padding: const EdgeInsets.only(
                     left: 5,
@@ -77,49 +76,37 @@ class ItmeType2New extends StatelessWidget {
                         color: Colors.white,
                       ),
                       Text(
-                        " مشاهدة",
-                        style: TextStyle(
-                          color: Colors.white,
-                          // color: Color.fromRGBO(148, 133, 74, 1),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                        ),
+                        MyText.textGenera4,
+                        style: MyTextStyle.style21,
                         textAlign: TextAlign.right,
                       ),
                     ],
                   ),
                 ),
+              ),
+            ],
+          ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(title,
+                    textAlign: TextAlign.right, style: MyTextStyle.style22),
               ],
             ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    title,
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Icon(
+              Icons.insert_drive_file_outlined,
+              size: 24,
+              color: Color.fromRGBO(148, 137, 74, 1),
             ),
-            SizedBox(
-              width: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 10),
-              child: Icon(
-                Icons.insert_drive_file_outlined,
-                size: 24,
-                color: Color.fromRGBO(148, 137, 74, 1),
-              ),
-            )
-          ],
-        ),
+          )
+        ],
       ),
     );
   }

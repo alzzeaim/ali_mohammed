@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
-import '../../../widget/Video_series.dart';
 
 class inquiry extends StatelessWidget {
   const inquiry({Key? key}) : super(key: key);
@@ -8,7 +10,7 @@ class inquiry extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(238, 237, 232, 1),
+      backgroundColor: MyColors.MyBackGround,
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.symmetric(vertical: 15),
@@ -22,8 +24,8 @@ class inquiry extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  "طلب استفسار",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  MyText.title45,
+                  style: MyTextStyle.style3,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 15),
@@ -33,11 +35,8 @@ class inquiry extends StatelessWidget {
                       textAlignVertical: TextAlignVertical.center,
                       textAlign: TextAlign.right,
                       decoration: InputDecoration(
-                        hintText: "ادخل الاسم كامل ",
-                        hintStyle: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.grey[500]),
+                        hintText: MyText.enterName,
+                        hintStyle: MyTextStyle.style4,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
                             borderSide: BorderSide.none),
@@ -61,11 +60,8 @@ class inquiry extends StatelessWidget {
                     // maxLength: 20,
                     textAlign: TextAlign.right,
                     decoration: InputDecoration(
-                      hintText: "ادخل البريد الالكتروني  ",
-                      hintStyle: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.grey[500]),
+                      hintText: MyText.enterEmail,
+                      hintStyle: MyTextStyle.style4,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
                         borderSide: BorderSide.none,
@@ -86,11 +82,8 @@ class inquiry extends StatelessWidget {
                     child: TextFormField(
                       textAlign: TextAlign.right,
                       decoration: InputDecoration(
-                        hintText: "ادخل رقم الهاتف  ",
-                        hintStyle: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.grey[500]),
+                        hintText: MyText.enterPhone,
+                        hintStyle:MyTextStyle.style4,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide: BorderSide.none,
@@ -112,12 +105,8 @@ class inquiry extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      "الرسالة ",
-                      style: TextStyle(
-                        color: Colors.grey[500],
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      MyText.theMessage,
+                      style:MyTextStyle.style5
                     ),
                     SizedBox(
                       width: 10,
@@ -136,10 +125,7 @@ class inquiry extends StatelessWidget {
                   // maxLength: 20,
                   textAlign: TextAlign.right,
                   decoration: InputDecoration(
-                    hintStyle: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.grey[500]),
+                    hintStyle: MyTextStyle.style4,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none,
@@ -157,11 +143,11 @@ class inquiry extends StatelessWidget {
                           EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                       decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color.fromRGBO(148, 133, 74, 1),
+                            color:MyColors.MyAction,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(20)),
-                      child: Text("487562"),
+                      child: Text(MyText.thisCode),
                     ),
                     SizedBox(
                       width: 100,
@@ -169,11 +155,8 @@ class inquiry extends StatelessWidget {
                       child: TextFormField(
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                          hintText: "كود التحقق",
-                          hintStyle: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.grey[500]),
+                          hintText:MyText.ValidationCode,
+                          hintStyle: MyTextStyle.style4,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
                             borderSide: BorderSide.none,
@@ -189,7 +172,7 @@ class inquiry extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                        primary: Color.fromRGBO(148, 133, 74, 1),
+                        primary: MyColors.MyAction,
                       ),
                       onPressed: () {},
                       icon: Icon(
@@ -197,12 +180,8 @@ class inquiry extends StatelessWidget {
                         color: Colors.white,
                       ),
                       label: Text(
-                        "ارسال",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                        ),
+                      MyText.send,
+                        style:MyTextStyle.style6
                       )),
                 )
               ],

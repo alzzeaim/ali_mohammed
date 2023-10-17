@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 
@@ -12,7 +13,7 @@ class RecentlyAddedBooks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromRGBO(238, 237, 232, 1),
+        backgroundColor: MyColors.MyBackGround,
         body: SafeArea(
           child: Stack(
             children: [

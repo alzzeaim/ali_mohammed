@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 
-AppBar myAppBar({String? title, String? image}) {
+AppBar myAppBar({String? title, String? image, required Null Function() backPage}) {
   return AppBar(
     title: title!.isNotEmpty ? Text(title) : Image.asset(image!),
   );

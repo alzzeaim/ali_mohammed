@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
-class ItmeType5New extends StatelessWidget {
+class ItmeType4_2New extends StatelessWidget {
   String decItme;
   final URL3;
   VoidCallback nextPage;
   bool isNew;
-
-  ItmeType5New({
+  ItmeType4_2New({
     super.key,
     required this.URL3,
     required this.decItme,
@@ -24,34 +23,33 @@ class ItmeType5New extends StatelessWidget {
         vertical: 20,
       ),
       width: double.infinity,
-      height: 430,
+      height: 320,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
             alignment: Alignment.topLeft,
             width: double.infinity,
-            height: 270,
+            height: 180,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(URL3),
-                fit: BoxFit.none,
+                fit: BoxFit.cover,
               ),
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
               ),
-              // border: Border.all(
-              //   color: const Color.fromRGBO(148, 133, 74, 1),
-              //   width: 2,
-              // ),
+              border: Border.all(
+                color: const Color.fromRGBO(148, 133, 74, 1),
+                width: 2,
+              ),
             ),
-            child: Stack(
+            child: Column(
               children: [
                 if (isNew)
                   Container(
@@ -69,7 +67,11 @@ class ItmeType5New extends StatelessWidget {
                       color: Colors.redAccent,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Text(MyText.textGeneral, style: MyTextStyle.style25),
+                    child:  Text(
+                      MyText.textGeneral,
+                      style: MyTextStyle.style25
+                      
+                    ),
                   ),
               ],
             ),
@@ -78,42 +80,48 @@ class ItmeType5New extends StatelessWidget {
             padding: EdgeInsets.all(10.0),
             child: Text(
               decItme,
-              style: MyTextStyle.style24,
-              textAlign: TextAlign.center,
+              style:MyTextStyle.style24,
+              textAlign: TextAlign.right,
             ),
           ),
           const SizedBox(
             height: 11,
           ),
-          Row(
-            children: [
-              GestureDetector(
-                onTap: () {
-                  nextPage();
-                },
-                child: Container(
-                  margin: EdgeInsets.all(15),
-                  padding: EdgeInsets.all(5),
-                  width: 100,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(148, 133, 74, 1),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.file_download_outlined,
-                        color: Colors.white,
-                        size: 20,
-                      ),
-                      Text(MyText.textGenera6, style: MyTextStyle.style21)
-                    ],
-                  ),
+          GestureDetector(
+            onTap: () {
+              nextPage();
+            },
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.only(
+                left: 5,
+                right: 10,
+                top: 5,
+                bottom: 5,
+              ),
+              decoration: const BoxDecoration(
+                color: Color.fromRGBO(148, 133, 74, 1),
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(20),
                 ),
               ),
-            ],
+              child: Center(
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.chevron_left_rounded,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      MyText.textGenera5,
+                      style: MyTextStyle.style21,
+                      textAlign: TextAlign.right,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ],
       ),

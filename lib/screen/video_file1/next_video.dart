@@ -32,7 +32,7 @@ class _NextVideoState extends State<NextVideo> {
       appBar: AppBar(
         leading: SizedBox(),
         title: AppBarTitle(
-          titel:MyText.title21,
+          titel: MyText.title21,
         ),
         actions: [
           AppBarActions(backPage: () {
@@ -58,10 +58,6 @@ class _NextVideoState extends State<NextVideo> {
     );
   }
 }
-
-
-
-
 
 class ItmeOfVideos extends StatelessWidget {
   String title1;
@@ -131,7 +127,7 @@ class ItmeOfVideos extends StatelessWidget {
               children: [
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
-                    primary: Color.fromRGBO(148, 133, 74, 1),
+                    primary: MyColors.MyAction,
                   ),
                   onPressed: () {},
                   icon: Icon(
@@ -152,7 +148,7 @@ class ItmeOfVideos extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    " $title3 من سلسلة",
+                    "   من سلسلة$title3 ",
                     style: MyTextStyle.style2,
                     textAlign: TextAlign.right,
                   ),

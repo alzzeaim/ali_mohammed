@@ -35,7 +35,7 @@ class _VoicePageState extends State<VoicePage> {
       ),
       // body: SafeArea(child: Text("voicePage")),
       body: TabBarPage(
-        tap11: MyText.text_general1,
+        tap11: MyText.textGeneral1,
         tap22: MyText.title29,
         page1: RecentlyAddedVoices(),
         page2: Voices(),

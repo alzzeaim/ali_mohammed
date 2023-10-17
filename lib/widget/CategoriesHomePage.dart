@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../screen/homePage.dart';
 
 // ignore: must_be_immutable
 class CategoriesHomePage extends StatelessWidget {

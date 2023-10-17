@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/call_us_file/contact_information.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/list_tile_menu.dart';
+import '../../constant/text.dart';
 import '../../widget/tabbarPage.dart';
 import '../Abut_Sheikh_page.dart';
 import '../Articles_file/Articles_page.dart';
@@ -11,7 +15,6 @@ import '../Religious pearls_file/Religious_pearls_page.dart';
 import '../homePage.dart';
 import '../video_file1/video_page.dart';
 import '../voice_file/voice_page.dart';
-import 'contact_information.dart';
 import 'inquiry.dart';
 
 class CallUs extends StatefulWidget {
@@ -24,14 +27,133 @@ class CallUs extends StatefulWidget {
 class _CallUsState extends State<CallUs> {
   @override
   Widget build(BuildContext context) {
+    List<Map<String, dynamic>> mapdrawer = [
+      {
+        // homee
+        'name': MyText.title37,
+        'icon': Icons.home,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => HomePage(),
+            ),
+          );
+        }
+      },
+      {
+        // AbutSheikhPage
+        'name': MyText.title36,
+        'icon': Icons.person_pin_outlined,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => AbutSheikhPage(),
+            ),
+          );
+        }
+      },
+      {
+        // videoPage
+        'name': MyText.title23,
+        'icon': Icons.videocam_outlined,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => videoPage(),
+            ),
+          );
+        }
+      },
+      {
+        // VoicePage
+        'name': MyText.title29,
+        'icon': Icons.mic_none_rounded,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => VoicePage(),
+            ),
+          );
+        }
+      },
+      {
+        // FatwasPage
+        'name': MyText.title9,
+        'icon': Icons.insert_drive_file_outlined,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => FatwasPage(),
+            ),
+          );
+        }
+      },
+      {
+        // ArticlesPage
+        'name': MyText.title1,
+        'icon': Icons.menu_book_rounded,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => ArticlesPage(),
+            ),
+          );
+        }
+      },
+      {
+        // ReligiousPearlsPage
+        'name': MyText.title19,
+        'icon': Icons.insert_drive_file_outlined,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => ReligiousPearlsPage(),
+            ),
+          );
+        }
+      },
+      {
+        // BooksAndPublicationsPage
+        'name': MyText.title5,
+        'icon': Icons.book_outlined,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => BooksAndPublicationsPage(),
+            ),
+          );
+        }
+      },
+      {
+        // Important_links
+        'name': MyText.title38,
+        'icon': Icons.link_rounded,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => Important_links(),
+            ),
+          );
+        }
+      },
+       {
+        // CallUs
+        'name': MyText.title39,
+        'icon': Icons.phone_in_talk_outlined,
+        'fun': () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => CallUs(),
+            ),
+          );
+        }
+      },
+    ];
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(238, 237, 232, 1),
-      endDrawer: Drawer(
-        // surfaceTintColor: Colors.pink,
-        // shadowColor: Colors.red,
-        // backgroundColor: Colors.amber,
-
+      backgroundColor:MyColors.MyBackGround,
+       endDrawer: Drawer(
         child: Container(
+          height: 400,
           color: Colors.black,
           child: ListView(
             children: [
@@ -43,126 +165,31 @@ class _CallUsState extends State<CallUs> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child:
-                          Image(image: AssetImage("assets/images/image2.png"))),
+                          Image(image: AssetImage(imageMeneger.image1))),
                 ),
               ),
-              ListTileMenu(
-                iconMenu: Icons.home,
-                titleitem_menu: "الرئيسية",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => HomePage(),
-                    ),
-                  );
+              ListView.builder(
+                itemCount: mapdrawer.length,
+                shrinkWrap: true,
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTileMenu(
+                      iconMenu: mapdrawer[index]["icon"],
+                      titleitem_menu: mapdrawer[index]["name"],
+                      movePage: mapdrawer[index]["fun"]);
                 },
               ),
-              ListTileMenu(
-                iconMenu: Icons.person_pin_outlined,
-                titleitem_menu: "عن الشيخ",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const AbutSheikhPage(),
-                    ),
-                  );
-                },
-              ),
-              ListTileMenu(
-                iconMenu: Icons.videocam_outlined,
-                titleitem_menu: "المرئيات",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const videoPage(),
-                    ),
-                  );
-                },
-              ),
-              ListTileMenu(
-                iconMenu: Icons.mic_none_rounded,
-                titleitem_menu: "الصوتيات",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const VoicePage(),
-                    ),
-                  );
-                },
-              ),
-              ListTileMenu(
-                iconMenu: Icons.insert_drive_file_outlined,
-                titleitem_menu: "الفتاوى",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => FatwasPage(),
-                    ),
-                  );
-                },
-              ),
-              ListTileMenu(
-                iconMenu: Icons.menu_book_rounded,
-                titleitem_menu: "المقالات",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const ArticlesPage(),
-                    ),
-                  );
-                },
-              ),
-              ListTileMenu(
-                iconMenu: Icons.book_outlined,
-                titleitem_menu: "الكتب والمؤلفات",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const BooksAndPublicationsPage(),
-                    ),
-                  );
-                },
-              ),
-              ListTileMenu(
-                iconMenu: Icons.insert_drive_file_outlined,
-                titleitem_menu: "الدرر الدينية",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const ReligiousPearlsPage(),
-                    ),
-                  );
-                },
-              ),
-              ListTileMenu(
-                iconMenu: Icons.link_rounded,
-                titleitem_menu: "روابط تهمك",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => Important_links(),
-                    ),
-                  );
-                },
-              ),
-              ListTileMenu(
-                iconMenu: Icons.phone_in_talk_outlined,
-                titleitem_menu: "اتصل بنا",
-                movePage: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => CallUs(),
-                    ),
-                  );
-                },
-              ),
+
+            
+              
+              
             ],
           ),
         ),
       ),
+      
       appBar: AppBar(
         title: Image(
-          image: AssetImage("assets/images/image2.png"),
+          image: AssetImage(imageMeneger.image1),
         ),
         leading: IconButton(
           icon: const Icon(
@@ -181,9 +208,9 @@ class _CallUsState extends State<CallUs> {
         child: Stack(
           children: [
             TabBarPage(
-                tap11: "معلومات الاتصال",
-                tap22: "استفسار",
-                page1: contactInformation(),
+                tap11: MyText.title43,
+                tap22: MyText.title44,
+                page1: ContactInformation(),
                 page2: inquiry())
           ],
         ),

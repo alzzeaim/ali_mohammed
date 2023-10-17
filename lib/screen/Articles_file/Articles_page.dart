@@ -33,7 +33,7 @@ class _ArticlesPageState extends State<ArticlesPage> {
       ),
       body: SafeArea(
           child: TabBarPage(
-        tap11: MyText.text_general1,
+        tap11: MyText.textGeneral1,
         tap22: MyText.title1,
         page1: RecentlyAddedArticles(),
         page2: const Articles(),

@@ -34,7 +34,7 @@ class _ReligiousPearlsPageState extends State<ReligiousPearlsPage> {
       ),
       // body: SafeArea(child: Text("Religious pearls_page")),
       body: TabBarPage(
-          tap11: MyText.text_general1,
+          tap11: MyText.textGeneral1,
           tap22: MyText.title19,
           page1: RecentlyAddedReligious(),
           page2: ReligiousPearls()),

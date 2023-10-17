@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/video_file1/next_video.dart';
 
-import '../../../widget/Video_series.dart';
 import '../../widget/type_of_itme/itme_type1_new.dart';
 
 class RecentlyAddedVideos extends StatelessWidget {
@@ -12,12 +12,13 @@ class RecentlyAddedVideos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(238, 237, 232, 1),
+      backgroundColor: MyColors.MyBackGround,
       body: SafeArea(
         child: Stack(
           children: [
             ItmeType1New(
                 isNew: true,
+                
                 nextPage: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(

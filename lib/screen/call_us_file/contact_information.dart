@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
-import '../../../widget/Video_series.dart';
-import '../../widget/type_of_itme/itme_type3_new.dart';
 
-class contactInformation extends StatelessWidget {
-  const contactInformation({Key? key}) : super(key: key);
+
+class ContactInformation extends StatelessWidget {
+  const ContactInformation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(238, 237, 232, 1),
+      backgroundColor: MyColors.MyBackGround,
       body: SafeArea(
         child: Stack(
           children: [
@@ -34,11 +36,8 @@ class contactInformation extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 10),
                           child: Text(
-                            "+967779531500",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
+                           MyText.phonNumber,
+                            style: MyTextStyle.style3
                           ),
                         ),
                         SizedBox(
@@ -48,7 +47,7 @@ class contactInformation extends StatelessWidget {
                           padding: const EdgeInsets.only(bottom: 10),
                           child: Icon(
                             Icons.phone,
-                            color: Color.fromRGBO(148, 137, 74, 1),
+                            color:MyColors.MyAction,
                             size: 24,
                           ),
                         ),
@@ -63,11 +62,8 @@ class contactInformation extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 10),
                           child: Text(
-                            " contact@sh-alialmatry.com",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            MyText.emailAddres,
+                            style:MyTextStyle.style3
                           ),
                         ),
                         SizedBox(
@@ -77,7 +73,7 @@ class contactInformation extends StatelessWidget {
                           padding: const EdgeInsets.only(bottom: 10),
                           child: Icon(
                             Icons.email_outlined,
-                            color: Color.fromRGBO(148, 137, 74, 1),
+                            color: MyColors.MyAction,
                             size: 24,
                           ),
                         ),
@@ -92,11 +88,8 @@ class contactInformation extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 10),
                           child: Text(
-                            "اليمن - اب - ذي السفال",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            MyText.location,
+                            style: MyTextStyle.style3
                           ),
                         ),
                         SizedBox(
@@ -106,7 +99,7 @@ class contactInformation extends StatelessWidget {
                           padding: const EdgeInsets.only(bottom: 10),
                           child: Icon(
                             Icons.location_on_outlined,
-                            color: Color.fromRGBO(148, 137, 74, 1),
+                            color: MyColors.MyAction,
                             size: 24,
                           ),
                         ),

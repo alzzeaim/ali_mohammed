@@ -34,7 +34,7 @@ class _videoPageState extends State<videoPage> {
       ),
       // body: SafeArea(child: Text("video_page")),
       body: TabBarPage(
-        tap11: MyText.text_general1,
+        tap11: MyText.textGeneral1,
         tap22: MyText.title23,
         page1: const RecentlyAddedVideos(),
         page2: const Videos(),

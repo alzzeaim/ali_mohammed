@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 
 
 
@@ -70,7 +71,7 @@ class _TabBarPageState extends State<TabBarPage>
                           dividerColor: Colors.white,
                           indicatorWeight: 0,
                           indicator: BoxDecoration(
-                            color: Color.fromRGBO(148, 133, 74, 1),
+                            color: MyColors.MyAction,
                             borderRadius: BorderRadius.circular(5),
                           ),
                           controller: tabController,

@@ -34,7 +34,7 @@ class _FatwasPageState extends State<FatwasPage> {
       ),
       // body: SafeArea(child: Text("Fatwas_page")),
       body: TabBarPage(
-        tap11: MyText.text_general1,
+        tap11: MyText.textGeneral1,
         tap22: MyText.title9,
         page1: RecentlyAddedFatwas(),
         page2: Fatwas(),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
 class ItmeType1New extends StatelessWidget {
   // String titleItme;
@@ -56,32 +58,20 @@ class ItmeType1New extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          if(isNew)
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 4,
-                              vertical: 2,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.redAccent,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: const Text(
-                              "جديد",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 10,
+                          if (isNew)
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 4,
+                                vertical: 2,
                               ),
+                              decoration: BoxDecoration(
+                                color: Colors.redAccent,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Text(MyText.textGeneral,
+                                  style: MyTextStyle.style17),
                             ),
-                          ),
-                          Text(
-                            "سلسة",
-                            style: TextStyle(
-                              color: Color.fromRGBO(148, 133, 74, 1),
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                          Text(MyText.textGenera2, style: MyTextStyle.style18),
                         ],
                       ),
                       const SizedBox(
@@ -89,11 +79,7 @@ class ItmeType1New extends StatelessWidget {
                       ),
                       Text(
                         decItme,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                        ),
+                        style: MyTextStyle.style19,
                         textAlign: TextAlign.right,
                       ),
                       const SizedBox(
@@ -111,7 +97,7 @@ class ItmeType1New extends StatelessWidget {
                               width: 90,
                             ),
                             const Text(
-                              "محتوى",
+                              MyText.textGenera3,
                             ),
                             const SizedBox(
                               width: 5,
@@ -124,10 +110,11 @@ class ItmeType1New extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               child: Center(
-                                  child: Text(numItme.toString(),
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                      ))),
+                                child: Text(
+                                  numItme.toString(),
+                                  style:MyTextStyle.style20
+                                ),
+                              ),
                             ),
                           ],
                         ),

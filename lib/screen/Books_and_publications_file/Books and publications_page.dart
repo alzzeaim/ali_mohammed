@@ -35,7 +35,7 @@ class _BooksAndPublicationsPageState extends State<BooksAndPublicationsPage> {
       ),
       // body:
       body: TabBarPage(
-        tap11: MyText.text_general1,
+        tap11: MyText.textGeneral1,
         tap22:MyText.title5,
         page1: RecentlyAddedBooks(),
         page2: BooksAndPublications(),

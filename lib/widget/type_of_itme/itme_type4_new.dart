@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
 class ItmeType4New extends StatelessWidget {
   String decItme;
@@ -65,12 +67,10 @@ class ItmeType4New extends StatelessWidget {
                       color: Colors.redAccent,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: const Text(
-                      "جديد",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 10,
-                      ),
+                    child:  Text(
+                      MyText.textGeneral,
+                      style: MyTextStyle.style25
+                      
                     ),
                   ),
               ],
@@ -80,11 +80,7 @@ class ItmeType4New extends StatelessWidget {
             padding: EdgeInsets.all(10.0),
             child: Text(
               decItme,
-              style: TextStyle(
-                // color: Color.fromRGBO(148, 133, 74, 1),
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-              ),
+              style:MyTextStyle.style24,
               textAlign: TextAlign.right,
             ),
           ),
@@ -118,13 +114,8 @@ class ItmeType4New extends StatelessWidget {
                       color: Colors.white,
                     ),
                     Text(
-                      " المزيد",
-                      style: TextStyle(
-                        color: Colors.white,
-                        // color: Color.fromRGBO(148, 133, 74, 1),
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      MyText.textGenera5,
+                      style: MyTextStyle.style21,
                       textAlign: TextAlign.right,
                     ),
                   ],

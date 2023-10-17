@@ -1,8 +1,9 @@
-import 'dart:ffi';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
 import '../widget/app_bar_actions.dart';
 import 'Notifications.dart';
@@ -84,11 +85,7 @@ class _AbutSheikhPageState extends State<AbutSheikhPage> {
               ),
               child: Text(
                 MyText.title36,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
+                style:MyTextStyle.style15
               ),
             ),
             Expanded(
@@ -153,11 +150,7 @@ class ItemOfAbutSheikh extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Text(
                 dec_text,
-                style: TextStyle(
-                  color: Colors.grey[700],
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: MyTextStyle.style16,
                 textAlign: TextAlign.right,
               ),
             ),
