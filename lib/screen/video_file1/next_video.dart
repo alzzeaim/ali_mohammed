@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/video_file1/video_page.dart';
@@ -74,26 +77,26 @@ class ItmeOfVideos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 350,
-      margin: EdgeInsets.all(20),
+      height: AppSize.z350,
+      margin: EdgeInsets.all(AppMargin.m20),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        color: MyColors.whiteColor,
+        borderRadius: BorderRadius.circular(AppPadding.p20),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Container(
             width: double.infinity,
-            height: 200,
+            height: AppSize.z200,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
+                topLeft: Radius.circular(AppPadding.p20),
+                topRight: Radius.circular(AppPadding.p20),
               ),
               border: Border.all(
                 color: MyColors.MyAction,
-                width: 2,
+                width: AppSize.z2,
               ),
               image: DecorationImage(
                 image: AssetImage(imageMeneger.image4),
@@ -102,10 +105,10 @@ class ItmeOfVideos extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: AppSize.z20,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding:  EdgeInsets.symmetric(horizontal: AppPadding.p20),
             child: Text(
               title1,
               style: MyTextStyle.style1,
@@ -113,7 +116,7 @@ class ItmeOfVideos extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding:  EdgeInsets.symmetric(horizontal:AppPadding.p20),
             child: Text(
               " الحلقة $title2",
               style: MyTextStyle.style1,
@@ -121,7 +124,7 @@ class ItmeOfVideos extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+            padding:  EdgeInsets.symmetric(horizontal: AppPadding.p20, vertical: AppPadding.p15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -132,19 +135,20 @@ class ItmeOfVideos extends StatelessWidget {
                   onPressed: () {},
                   icon: Icon(
                     Icons.shower_outlined,
-                    color: Colors.white,
+                    color:MyColors.whiteColor,
                   ),
                   label: Text(
                     "شاهد",
                     style: TextStyle(
-                      color: Colors.white,
+                      // color:MyColors.whiteColor,
+                      color: MyColors.MyAction,
                       fontWeight: FontWeight.w600,
                       fontSize: 14,
                     ),
                   ),
                 ),
                 SizedBox(
-                  width: 20,
+                  width: AppSize.z20,
                 ),
                 Expanded(
                   child: Text(

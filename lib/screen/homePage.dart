@@ -1,7 +1,11 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Abut_Sheikh_page.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Important_links.dart';
@@ -15,6 +19,7 @@ import 'Articles_file/Articles_page.dart';
 import 'Books_and_publications_file/Books and publications_page.dart';
 import 'Fatwas_file/Fatwas_page.dart';
 import 'Religious pearls_file/Religious_pearls_page.dart';
+import 'bottom_bar.dart';
 import 'call_us_file/call_us.dart';
 
 // import 'package:carousel_slider/carousel_slider.dart';
@@ -152,20 +157,20 @@ class _HomePageState extends State<HomePage> {
       },
     ];
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(238, 237, 232, 1),
+      backgroundColor: MyColors.MyBackGround,
       endDrawer: Drawer(
         child: Container(
-          height: 400,
-          color: Colors.black,
+          height: AppSize.z400,
+          color: MyColors.blackColor,
           child: ListView(
             children: [
               DrawerHeader(
                 child: Center(
                   child: Container(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(AppPadding.p10),
                       decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10)),
+                          color: MyColors.whiteColor,
+                          borderRadius: BorderRadius.circular(AppPadding.p10)),
                       child: Image(image: AssetImage(imageMeneger.image1))),
                 ),
               ),
@@ -194,7 +199,7 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => Notifcations(),
+                builder: (context) => BottomBar(),
               ),
             );
           },
@@ -216,16 +221,16 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(
-                  left: 10,
-                  right: 10,
-                  top: 250,
-                  bottom: 10,
+                margin: EdgeInsets.only(
+                  left: AppMargin.m10,
+                  right: AppMargin.m10,
+                  top: AppMargin.m240,
+                  bottom: AppMargin.m10,
                 ),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(15),
+                  color: MyColors.grey300Color,
+                  borderRadius: BorderRadius.circular(AppPadding.p15),
                 ),
                 child: Column(
                   children: [
@@ -338,46 +343,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      // bottomNavigationBar: Container(
-      //    selectedItemColor: Colors.red,
-      //   backgroundColor: Colors.amber,
-      //   unselectedItemColor: Colors.teal,
-      //   currentIndex: currentIndex,
-      //   onTap: (int newIndex) {
-      //     setState(() {
-      //       currentIndex = newIndex;
-      //     });
-      //   },
-      //   items: const [
-      //     BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.home_outlined,
-      //           color: Colors.grey,
-      //         ),
-      //         label: ""),
-      //     BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.search,
-      //           color: Colors.grey,
-      //         ),
-      //         label: ""),
-      //     BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.file_download_outlined,
-      //           color: Colors.grey,
-      //         ),
-      //         label: ""),
-      //     BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.settings_outlined,
-      //           color: Colors.grey,
-      //         ),
-      //         label: ""),
-      //   ],
-      //   color: Colors.red,
-      //   width: double.infinity,
-      //   height: 50,
-      // ),
     );
   }
 }

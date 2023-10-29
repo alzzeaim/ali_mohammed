@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 
 
 
@@ -39,51 +41,50 @@ class _TabBarPageState extends State<TabBarPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(238, 237, 232, 1),
+      backgroundColor:MyColors.MyBackGround,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: EdgeInsets.symmetric(horizontal: AppPadding.p10),
           child: Container(
             height: MediaQuery.of(context).size.height,
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               // crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                SizedBox(height: 20),
+                SizedBox(height: AppSize.z20),
                 Container(
                   // height: 50,
                   width: MediaQuery.of(context).size.height,
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(5)),
+                      color: MyColors.whiteColor,
+                      borderRadius: BorderRadius.circular(AppPadding.p5)),
                   child: Column(
                     children: [
                       Padding(
                         padding: EdgeInsets.symmetric(
-                          horizontal: 0,
-                          vertical: 10,
+                          vertical: AppPadding.p10,
                         ),
                         child: TabBar(
                           unselectedLabelColor:
-                              Color.fromRGBO(102, 102, 102, 1),
-                          labelColor: Colors.white,
-                          indicatorColor: Colors.white,
-                          dividerColor: Colors.white,
+                              MyColors.grey2_N_Color,
+                          labelColor:MyColors.whiteColor,
+                          indicatorColor: MyColors.whiteColor,
+                          dividerColor: MyColors.whiteColor,
                           indicatorWeight: 0,
                           indicator: BoxDecoration(
                             color: MyColors.MyAction,
-                            borderRadius: BorderRadius.circular(5),
+                            borderRadius: BorderRadius.circular(AppPadding.p5),
                           ),
                           controller: tabController,
                           tabs: [
                             Tab(
                               child: Center(
                                 child: Padding(
-                                  padding: const EdgeInsets.all(5.0),
+                                  padding:  EdgeInsets.all(AppPadding.p5),
                                   child: Row(
                                     children: [
                                       SizedBox(
-                                        width: 15,
+                                        width: AppSize.z15,
                                       ),
                                       //text1
                                       Text(
@@ -91,7 +92,7 @@ class _TabBarPageState extends State<TabBarPage>
                                         // style: TextStyle(color: Colors.white),
                                       ),
                                       SizedBox(
-                                        width: 10,
+                                        width: AppSize.z10,
                                       ),
                                       Icon(Icons.watch_later_outlined),
                                     ],
@@ -102,16 +103,16 @@ class _TabBarPageState extends State<TabBarPage>
                             Tab(
                               child: Center(
                                 child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding:  EdgeInsets.all(AppSize.z10),
                                   child: Row(
                                     children: [
                                       SizedBox(
-                                        width: 25,
+                                        width: AppSize.z25,
                                       ),
                                       //text2
                                       Text(widget.tap22),
                                       SizedBox(
-                                        width: 10,
+                                        width: AppSize.z10,
                                       ),
                                       Icon(
                                         Icons.videocam_outlined,

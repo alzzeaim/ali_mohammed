@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/call_us_file/contact_information.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/list_tile_menu.dart';
 import '../../constant/text.dart';
@@ -153,17 +155,17 @@ class _CallUsState extends State<CallUs> {
       backgroundColor:MyColors.MyBackGround,
        endDrawer: Drawer(
         child: Container(
-          height: 400,
-          color: Colors.black,
+          height: AppSize.z400,
+          color: MyColors.blackColor,
           child: ListView(
             children: [
               DrawerHeader(
                 child: Center(
                   child: Container(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(AppPadding.p10),
                       decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10)),
+                          color:MyColors.whiteColor,
+                          borderRadius: BorderRadius.circular(AppPadding.p10)),
                       child:
                           Image(image: AssetImage(imageMeneger.image1))),
                 ),

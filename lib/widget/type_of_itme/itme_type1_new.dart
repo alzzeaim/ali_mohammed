@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
@@ -28,28 +32,28 @@ class ItmeType1New extends StatelessWidget {
         nextPage();
       },
       child: Container(
-        margin: const EdgeInsets.symmetric(
-          horizontal: 10,
-          vertical: 20,
+        margin:  EdgeInsets.symmetric(
+          horizontal: AppMargin.m10,
+          vertical: AppMargin.m20,
         ),
         width: double.infinity,
-        height: 150,
+        height: AppSize.z150,
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
+          color:MyColors.whiteColor,
+          borderRadius: BorderRadius.circular(AppPadding.p15),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(right: 10),
+          padding:  EdgeInsets.only(right: AppPadding.p10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 10,
-                    right: 10,
-                    top: 10,
-                    bottom: 10,
+                  padding:  EdgeInsets.only(
+                    left: AppPadding.p10,
+                    right: AppPadding.p10,
+                    top: AppPadding.p10,
+                    bottom: AppPadding.p10,
                   ),
                   child: Column(
                     // mainAxisAlignment: MainAxisAlignment.end,
@@ -60,13 +64,13 @@ class ItmeType1New extends StatelessWidget {
                         children: [
                           if (isNew)
                             Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 4,
-                                vertical: 2,
+                              padding:  EdgeInsets.symmetric(
+                                horizontal: AppPadding.p4,
+                                vertical: AppPadding.p2,
                               ),
                               decoration: BoxDecoration(
-                                color: Colors.redAccent,
-                                borderRadius: BorderRadius.circular(15),
+                                color: MyColors.redAccentColor,
+                                borderRadius: BorderRadius.circular(AppPadding.p15),
                               ),
                               child: Text(MyText.textGeneral,
                                   style: MyTextStyle.style17),
@@ -74,40 +78,40 @@ class ItmeType1New extends StatelessWidget {
                           Text(MyText.textGenera2, style: MyTextStyle.style18),
                         ],
                       ),
-                      const SizedBox(
-                        height: 5,
+                       SizedBox(
+                        height: AppSize.z5,
                       ),
                       Text(
                         decItme,
                         style: MyTextStyle.style19,
                         textAlign: TextAlign.right,
                       ),
-                      const SizedBox(
-                        height: 40,
+                       SizedBox(
+                        height: AppSize.z40,
                       ),
                       Expanded(
                         child: Row(
                           children: [
                             Icon(
                               iconsItme,
-                              color: Color.fromRGBO(148, 133, 74, 1),
-                              size: 30,
+                              color:MyColors.MyAction,
+                              size: AppSize.z30,
                             ),
-                            const SizedBox(
-                              width: 90,
+                             SizedBox(
+                              width: AppSize.z90,
                             ),
                             const Text(
                               MyText.textGenera3,
                             ),
-                            const SizedBox(
-                              width: 5,
+                             SizedBox(
+                              width: AppSize.z5,
                             ),
                             Container(
-                              width: 25,
-                              height: 25,
+                              width: AppSize.z25,
+                              height: AppSize.z25,
                               decoration: BoxDecoration(
-                                color: const Color.fromRGBO(148, 133, 74, 1),
-                                borderRadius: BorderRadius.circular(15),
+                                color: MyColors.MyAction,
+                                borderRadius: BorderRadius.circular(AppPadding.p15),
                               ),
                               child: Center(
                                 child: Text(
@@ -124,12 +128,12 @@ class ItmeType1New extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 150,
-                height: 130,
+                width: AppSize.z150,
+                height: AppSize.z130,
                 decoration: BoxDecoration(
                     border: Border.all(
-                        color: const Color.fromRGBO(148, 133, 74, 1), width: 2),
-                    borderRadius: BorderRadius.circular(15),
+                        color:MyColors.MyAction, width: AppSize.z2),
+                    borderRadius: BorderRadius.circular(AppPadding.p15),
                     image: DecorationImage(
                         image: AssetImage(URL2), fit: BoxFit.cover)),
               ),

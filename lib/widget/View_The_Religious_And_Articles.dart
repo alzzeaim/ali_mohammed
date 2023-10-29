@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 
 import '../constant/text.dart';
 import '../constant/text_style.dart';
@@ -16,25 +20,25 @@ class ViewTheReligiousAndArticles extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.all(15),
+          margin: EdgeInsets.all(AppMargin.m15),
           width: double.infinity,
-          height: 210,
+          height: AppSize.z210,
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(
                   imageMeneger.image6,
                 ),
                 fit: BoxFit.cover),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(AppPadding.p20),
           ),
         ),
         Container(
-          padding: EdgeInsets.all(10),
-          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          padding: EdgeInsets.all(AppPadding.p10),
+          margin: EdgeInsets.symmetric(vertical: AppMargin.m10, horizontal: AppMargin.m20),
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
+            color:MyColors.whiteColor,
+            borderRadius: BorderRadius.circular(AppPadding.p20),
           ),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -46,19 +50,18 @@ class ViewTheReligiousAndArticles extends StatelessWidget {
                   textAlign: TextAlign.right,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: AppSize.z10,
                 ),
                 Container(
-                  margin: EdgeInsets.all(0),
                   width: double.infinity,
                   height: 2,
                   decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(15),
+                    color:MyColors.blackColor,
+                    borderRadius: BorderRadius.circular(AppPadding.p15),
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: AppSize.z10,
                 ),
                 Text(dec,
                     textAlign: TextAlign.right, style: MyTextStyle.style28)

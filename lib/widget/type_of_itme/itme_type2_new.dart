@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
@@ -16,12 +20,12 @@ class ItmeType2New extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: EdgeInsets.only(top: AppMargin.m20),
       width: double.infinity,
-      height: 120,
+      height: AppSize.z120,
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
+        color:MyColors.whiteColor,
+        borderRadius: BorderRadius.circular(AppPadding.p15),
       ),
       child: Row(
         children: [
@@ -31,14 +35,14 @@ class ItmeType2New extends StatelessWidget {
             children: [
               if (isNew)
                 Container(
-                  margin: EdgeInsets.only(left: 10),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 4,
-                    vertical: 2,
+                  margin: EdgeInsets.only(left: AppMargin.m10),
+                  padding:  EdgeInsets.symmetric(
+                    horizontal: AppPadding.p4,
+                    vertical: AppPadding.p2,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.redAccent,
-                    borderRadius: BorderRadius.circular(15),
+                    color: MyColors.redAccentColor,
+                    borderRadius: BorderRadius.circular(AppPadding.p15),
                   ),
                   child: Text(
                     MyText.textGeneral,
@@ -46,25 +50,25 @@ class ItmeType2New extends StatelessWidget {
                   ),
                 ),
               SizedBox(
-                height: 50,
+                height: AppSize.z50,
               ),
               GestureDetector(
                 onTap: () {
                   nextPage();
                 },
                 child: Container(
-                  height: 40,
-                  padding: const EdgeInsets.only(
-                    left: 5,
-                    right: 10,
-                    top: 5,
-                    bottom: 5,
+                  height: AppSize.z40,
+                  padding:  EdgeInsets.only(
+                    left:AppPadding.p5,
+                    right: AppPadding.p10,
+                    top: AppPadding.p5,
+                    bottom: AppPadding.p5,
                   ),
-                  decoration: const BoxDecoration(
-                    color: Color.fromRGBO(148, 133, 74, 1),
+                  decoration:  BoxDecoration(
+                    color:MyColors.MyAction,
                     borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(20),
-                      bottomLeft: Radius.circular(20),
+                      topRight: Radius.circular(AppPadding.p20),
+                      bottomLeft: Radius.circular(AppPadding.p20),
                     ),
                   ),
                   child: Row(
@@ -73,7 +77,7 @@ class ItmeType2New extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.chevron_left_rounded,
-                        color: Colors.white,
+                        color:MyColors.whiteColor,
                       ),
                       Text(
                         MyText.textGenera4,
@@ -96,14 +100,14 @@ class ItmeType2New extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 10,
+            width: AppSize.z10,
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 10),
+            padding:  EdgeInsets.only(right: AppPadding.p10),
             child: Icon(
               Icons.insert_drive_file_outlined,
-              size: 24,
-              color: Color.fromRGBO(148, 137, 74, 1),
+              size: AppSize.z24,
+              color:MyColors.MyAction,
             ),
           )
         ],

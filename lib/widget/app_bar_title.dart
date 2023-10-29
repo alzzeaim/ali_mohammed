@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
 
 
@@ -15,18 +19,15 @@ class AppBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        top: 15,
+      padding:  EdgeInsets.only(
+        top: AppPadding.p15,
       ),
       child: Center(
         child: Text(
           titel,
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.grey,
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
+          style: MyTextStyle.style29,
+          
         ),
       ),
     );

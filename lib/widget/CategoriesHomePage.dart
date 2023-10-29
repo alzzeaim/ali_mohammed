@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 
 
 // ignore: must_be_immutable
@@ -21,17 +25,15 @@ class CategoriesHomePage extends StatelessWidget {
         newPage();
       },
       child: Container(
-        margin: const EdgeInsets.only(
-          left: 15,
-          right: 0,
-          top: 15,
-          bottom: 0,
+        margin:  EdgeInsets.only(
+          left: AppMargin.m15,
+          top: AppMargin.m15,
         ),
         width: wi,
-        height: 124,
+        height: AppSize.z124,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Colors.white,
+          borderRadius: BorderRadius.circular(AppPadding.p10),
+          color:MyColors.whiteColor,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,22 +41,17 @@ class CategoriesHomePage extends StatelessWidget {
           children: [
             Icon(
               iconn,
-              color: Color.fromRGBO(148, 137, 74, 1),
-              size: 60,
+              color:MyColors.MyAction,
+              size: AppSize.z60,
             ),
-            const SizedBox(
-              height: 10,
+             SizedBox(
+              height: AppSize.z10,
             ),
             Text(
               name_cato,
-              style: const TextStyle(
-                  color: Color.fromRGBO(
-                    119,
-                    119,
-                    119,
-                    1,
-                  ),
-                  fontSize: 14,
+              style:  TextStyle(
+                  color:MyColors.grey_N_Color,
+                  fontSize: AppSize.z14,
                   fontWeight: FontWeight.w600),
             ),
           ],

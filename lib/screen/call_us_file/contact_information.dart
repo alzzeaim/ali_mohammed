@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
@@ -16,91 +19,89 @@ class ContactInformation extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              padding: EdgeInsets.all(20),
-              margin: EdgeInsets.only(top: 100),
+              padding: EdgeInsets.all(AppPadding.p20),
+              margin: EdgeInsets.only(top: AppMargin.m100),
               width: double.infinity,
-              height: 250,
+              height: AppSize.z250,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                // border: Border.all(
-                //     color: Color.fromRGBO(148, 137, 74, 1), width: 10),
+                color: MyColors.whiteColor,
+                borderRadius: BorderRadius.circular(AppPadding.p20),
               ),
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding:  EdgeInsets.all(AppPadding.p15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding:  EdgeInsets.only(bottom: AppPadding.p10),
                           child: Text(
                            MyText.phonNumber,
                             style: MyTextStyle.style3
                           ),
                         ),
                         SizedBox(
-                          width: 15,
+                          width: AppSize.z15,
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding:  EdgeInsets.only(bottom: AppPadding.p10),
                           child: Icon(
                             Icons.phone,
                             color:MyColors.MyAction,
-                            size: 24,
+                            size: AppSize.z24,
                           ),
                         ),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding:  EdgeInsets.all(AppPadding.p15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding:  EdgeInsets.only(bottom: AppPadding.p10),
                           child: Text(
                             MyText.emailAddres,
                             style:MyTextStyle.style3
                           ),
                         ),
                         SizedBox(
-                          width: 15,
+                          width: AppSize.z15,
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding:  EdgeInsets.only(bottom: AppPadding.p10),
                           child: Icon(
                             Icons.email_outlined,
                             color: MyColors.MyAction,
-                            size: 24,
+                            size: AppSize.z24,
                           ),
                         ),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding:  EdgeInsets.all(AppPadding.p15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding:  EdgeInsets.only(bottom: AppPadding.p10),
                           child: Text(
                             MyText.location,
                             style: MyTextStyle.style3
                           ),
                         ),
                         SizedBox(
-                          width: 15,
+                          width: AppSize.z15,
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding:  EdgeInsets.only(bottom: AppPadding.p10),
                           child: Icon(
                             Icons.location_on_outlined,
                             color: MyColors.MyAction,
-                            size: 24,
+                            size: AppSize.z24,
                           ),
                         ),
                       ],

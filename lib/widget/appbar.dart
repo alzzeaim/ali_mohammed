@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
 AppBar myAppBar({
@@ -15,23 +19,19 @@ AppBar myAppBar({
           backPage();
         },
         child: Padding(
-          padding: const EdgeInsets.only(
-            right: 15,
-            top: 15,
+          padding:  EdgeInsets.only(
+            right: AppPadding.p15,
+            top: AppPadding.p15,
           ),
           child: Row(
             children: [
               Text(
-                "رجوع",
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 10,
-                  fontWeight: FontWeight.w600,
-                ),
+                MyText.textGenera7,
+                style: MyTextStyle.style30,
               ),
               Icon(
                 Icons.chevron_right_rounded,
-                color: Colors.grey,
+                color:MyColors.greyColor,
               ),
             ],
           ),

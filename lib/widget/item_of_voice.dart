@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 
 import '../constant/colors.dart';
 import '../constant/text.dart';
@@ -12,22 +15,22 @@ class ItemOfVoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+      margin: EdgeInsets.symmetric(vertical: AppMargin.m10, horizontal: AppMargin.m15),
       width: double.infinity,
-      height: 100,
+      height: AppSize.z100,
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
+        color:MyColors.whiteColor,
+        borderRadius: BorderRadius.circular(AppPadding.p15),
       ),
       child: Row(
         children: [
           Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding:  EdgeInsets.all(AppPadding.p15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Icon(Icons.file_download_outlined,
-                    size: 26, color: MyColors.MyAction),
+                    size: AppSize.z26, color: MyColors.MyAction),
               ],
             ),
           ),
@@ -83,13 +86,13 @@ class ItemOfVoice extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 10,
+            width: AppSize.z10,
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 10),
+            padding:  EdgeInsets.only(right: AppPadding.p10),
             child: Icon(
               Icons.mic_none_rounded,
-              size: 24,
+              size: AppSize.z24,
               color: MyColors.MyAction,
             ),
           )

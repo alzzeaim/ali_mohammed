@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Fatwas_file/Fatwas_page.dart';
@@ -45,11 +48,11 @@ class _NextFatwasState extends State<NextFatwas> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(AppMargin.m20),
+                padding: EdgeInsets.all(AppPadding.p10),
                 decoration: BoxDecoration(
                   color: MyColors.MyAction,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(AppPadding.p20),
                 ),
                 child: Text(
                   MyText.title11,
@@ -59,13 +62,13 @@ class _NextFatwasState extends State<NextFatwas> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: MyColors.whiteColor,
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(70),
+                    topLeft: Radius.circular(AppPadding.p70),
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding:  EdgeInsets.all(AppPadding.p15),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -75,21 +78,21 @@ class _NextFatwasState extends State<NextFatwas> {
                         style: MyTextStyle.style8
                       ),
                       SizedBox(
-                        height: 10,
+                        height: AppSize.z10,
                       ),
                       Text(
                        MyText.title13,
                         style: MyTextStyle.style9
                       ),
                       SizedBox(
-                        height: 10,
+                        height: AppSize.z10,
                       ),
                       Text(
                         MyText.title14,
                         style:MyTextStyle.style10
                       ),
                       SizedBox(
-                        height: 10,
+                        height: AppSize.z10,
                       ),
                       /////////
                       Text(
@@ -98,7 +101,7 @@ class _NextFatwasState extends State<NextFatwas> {
                         textAlign: TextAlign.end,
                       ),
                       SizedBox(
-                        height: 10,
+                        height:AppSize.z10,
                       ),
                       Text(
                         MyText.title15,
@@ -106,7 +109,7 @@ class _NextFatwasState extends State<NextFatwas> {
                         ),
                       
                       SizedBox(
-                        height: 10,
+                        height: AppSize.z10,
                       ),
                       Text(
                         MyText.title16,

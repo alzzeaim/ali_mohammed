@@ -129,5 +129,6 @@ class MyText {
   static const textGenera4 = " مشاهدة";
   static const textGenera5 = "المزيد";
   static const textGenera6 = "تحميل";
+  static const textGenera7 = "رجوع";
   // static const textGenera2 = "سلسة";
 }

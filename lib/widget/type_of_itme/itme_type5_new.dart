@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
@@ -19,55 +23,51 @@ class ItmeType5New extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 20,
+      margin:  EdgeInsets.symmetric(
+        horizontal: AppMargin.m10,
+        vertical: AppMargin.m20,
       ),
       width: double.infinity,
-      height: 430,
+      height: AppSize.z430,
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        color:MyColors.whiteColor,
+        borderRadius: BorderRadius.circular(AppPadding.p20),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
+            margin: EdgeInsets.symmetric(vertical: AppMargin.m10),
             alignment: Alignment.topLeft,
             width: double.infinity,
-            height: 270,
+            height: AppSize.z270,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(URL3),
                 fit: BoxFit.none,
               ),
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
+              borderRadius:  BorderRadius.only(
+                topLeft: Radius.circular(AppPadding.p20),
+                topRight: Radius.circular(AppPadding.p20),
               ),
-              // border: Border.all(
-              //   color: const Color.fromRGBO(148, 133, 74, 1),
-              //   width: 2,
-              // ),
+              
             ),
             child: Stack(
               children: [
                 if (isNew)
                   Container(
-                    // width: 20,
-                    // height: 20,
+                   
                     margin: EdgeInsets.only(
-                      left: 10,
-                      top: 10,
+                      left: AppMargin.m10,
+                      top: AppMargin.m10,
                     ),
                     padding: const EdgeInsets.symmetric(
                       horizontal: 4,
                       vertical: 2,
                     ),
                     decoration: BoxDecoration(
-                      color: Colors.redAccent,
-                      borderRadius: BorderRadius.circular(15),
+                      color: MyColors.redAccentColor,
+                      borderRadius: BorderRadius.circular(AppPadding.p15),
                     ),
                     child: Text(MyText.textGeneral, style: MyTextStyle.style25),
                   ),
@@ -75,15 +75,15 @@ class ItmeType5New extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.all(AppPadding.p10),
             child: Text(
               decItme,
               style: MyTextStyle.style24,
               textAlign: TextAlign.center,
             ),
           ),
-          const SizedBox(
-            height: 11,
+           SizedBox(
+            height: AppMargin.m11,
           ),
           Row(
             children: [
@@ -92,21 +92,21 @@ class ItmeType5New extends StatelessWidget {
                   nextPage();
                 },
                 child: Container(
-                  margin: EdgeInsets.all(15),
-                  padding: EdgeInsets.all(5),
-                  width: 100,
-                  height: 30,
+                  margin: EdgeInsets.all(AppMargin.m15),
+                  padding: EdgeInsets.all(AppPadding.p5),
+                  width: AppSize.z100,
+                  height: AppSize.z30,
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(148, 133, 74, 1),
-                    borderRadius: BorderRadius.circular(10),
+                    color:MyColors.MyAction,
+                    borderRadius: BorderRadius.circular(AppPadding.p10),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
                         Icons.file_download_outlined,
-                        color: Colors.white,
-                        size: 20,
+                        color:MyColors.whiteColor,
+                        size: AppSize.z20,
                       ),
                       Text(MyText.textGenera6, style: MyTextStyle.style21)
                     ],

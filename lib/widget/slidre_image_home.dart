@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 
 class SliderImages extends StatelessWidget {
   final URL;
@@ -9,14 +12,14 @@ class SliderImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(
-        vertical: 20,
-        horizontal: 10,
+      margin:  EdgeInsets.symmetric(
+        vertical: AppMargin.m20,
+        horizontal: AppMargin.m10,
       ),
-      width: 348,
-      height: 200,
+      width: AppSize.z348,
+      height: AppSize.z200,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(AppPadding.p20),
         image:  DecorationImage(
           image: AssetImage(URL),
           fit: BoxFit.cover,
@@ -31,7 +34,7 @@ class SliderImages extends StatelessWidget {
                 Colors.black.withOpacity(0.2),
               ],
             ),
-            borderRadius: BorderRadius.circular(15)),
+            borderRadius: BorderRadius.circular(AppPadding.p15)),
       ),
     );
   }

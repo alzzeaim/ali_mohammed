@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_alli_mohammed_hassan/widget/tabbarPage.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
 class ListTileMenu extends StatelessWidget {
   IconData iconMenu;
@@ -16,26 +19,20 @@ class ListTileMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       trailing: Padding(
-        padding: const EdgeInsets.only(
-          left: 0,
-          right: 20,
-          top: 5,
-          bottom: 0,
+        padding:  EdgeInsets.only(
+          right: AppPadding.p20,
+          top: AppPadding.p5,
         ),
         child: Icon(
           iconMenu,
-          color: Color.fromRGBO(148, 137, 74, 1),
-          size: 24,
+          color:MyColors.MyAction,
+          size: AppSize.z24,
         ),
       ),
       title: Text(
         titleitem_menu,
         textAlign: TextAlign.right,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 16,
-          fontWeight: FontWeight.w600,
-        ),
+        style: MyTextStyle.style29
       ),
       onTap: () {
         movePage();

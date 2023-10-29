@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 
 import 'colors.dart';
 
@@ -144,4 +145,15 @@ class MyTextStyle {
   );
   static final style28 = TextStyle(fontSize: 14);
   // static final style18 =
+
+  static final style29 = TextStyle(
+    color: MyColors.greyColor,
+    fontSize: AppSize.z16,
+    fontWeight: FontWeight.w600,
+  );
+   static final style30 = TextStyle(
+    color: MyColors.greyColor,
+    fontSize: AppSize.z10,
+    fontWeight: FontWeight.w600,
+  );
 }

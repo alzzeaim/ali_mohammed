@@ -1,7 +1,11 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
@@ -43,7 +47,7 @@ class _AbutSheikhPageState extends State<AbutSheikhPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(238, 237, 232, 1),
+      backgroundColor: MyColors.MyBackGround,
       appBar: AppBar(
         actions: [
           AppBarActions(backPage: () {
@@ -74,13 +78,13 @@ class _AbutSheikhPageState extends State<AbutSheikhPage> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              margin: EdgeInsets.all(AppMargin.m20),
+              padding: EdgeInsets.symmetric(horizontal: AppPadding.p30, vertical: AppPadding.p10),
               decoration: BoxDecoration(
-                color: Color.fromRGBO(148, 133, 74, 1),
+                color:MyColors.MyAction,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(AppPadding.p20),
+                  topRight: Radius.circular(AppPadding.p20),
                 ),
               ),
               child: Text(
@@ -91,8 +95,8 @@ class _AbutSheikhPageState extends State<AbutSheikhPage> {
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: BorderRadius.circular(20),
+                  color:MyColors.grey200Color,
+                  borderRadius: BorderRadius.circular(AppPadding.p20),
                 ),
                 child: ListView.builder(
                   itemCount: myListTitle.length,
@@ -121,33 +125,33 @@ class ItemOfAbutSheikh extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: EdgeInsets.all(AppMargin.m20),
       width: double.infinity,
-      height: 100,
+      height: AppSize.z100,
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        color: MyColors.whiteColor,
+        borderRadius: BorderRadius.circular(AppPadding.p20),
       ),
       child: Row(
         children: [
           Container(
-            width: 30,
+            width: AppSize.z30,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(148, 133, 74, 1),
+              color: MyColors.MyAction,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                bottomLeft: Radius.circular(20),
+                topLeft: Radius.circular(AppPadding.p20),
+                bottomLeft: Radius.circular(AppPadding.p20),
               ),
             ),
             child: Icon(
               Icons.chevron_left_outlined,
-              color: Colors.white,
+              color: MyColors.whiteColor,
             ),
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding:  EdgeInsets.all(AppPadding.p15),
               child: Text(
                 dec_text,
                 style: MyTextStyle.style16,
