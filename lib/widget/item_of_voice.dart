@@ -20,7 +20,7 @@ class ItemOfVoice extends StatelessWidget {
       height: AppSize.z100,
       decoration: BoxDecoration(
         color:MyColors.whiteColor,
-        borderRadius: BorderRadius.circular(AppPadding.p15),
+        borderRadius: BorderRadius.circular(AppSize.z15),
       ),
       child: Row(
         children: [

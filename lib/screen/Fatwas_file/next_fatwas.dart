@@ -7,8 +7,8 @@ import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Fatwas_file/Fatwas_page.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
 
-import '../../widget/app_bar_actions.dart';
 
 
 class NextFatwas extends StatefulWidget {
@@ -23,25 +23,15 @@ class _NextFatwasState extends State<NextFatwas> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
-      appBar: AppBar(
-        leading: Row(
-          children: [
-            SizedBox(),
-          ],
-        ),
-        actions: [
-          AppBarActions(backPage: () {
+      appBar: AppBarWidget.appBarWidgetImageAndBack(
+          URLImage: imageMeneger.image1,
+          backPage: () {
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => FatwasPage(),
               ),
             );
-          })
-        ],
-        title: Image(
-          image: AssetImage(imageMeneger.image1),
-        ),
-      ),
+          }),
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -52,7 +42,7 @@ class _NextFatwasState extends State<NextFatwas> {
                 padding: EdgeInsets.all(AppPadding.p10),
                 decoration: BoxDecoration(
                   color: MyColors.MyAction,
-                  borderRadius: BorderRadius.circular(AppPadding.p20),
+                  borderRadius: BorderRadius.circular(AppSize.z20),
                 ),
                 child: Text(
                   MyText.title11,
@@ -64,33 +54,24 @@ class _NextFatwasState extends State<NextFatwas> {
                 decoration: BoxDecoration(
                   color: MyColors.whiteColor,
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(AppPadding.p70),
+                    topLeft: Radius.circular(AppSize.z70),
                   ),
                 ),
                 child: Padding(
-                  padding:  EdgeInsets.all(AppPadding.p15),
+                  padding: EdgeInsets.all(AppPadding.p15),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
-                        MyText.title12,
-                        style: MyTextStyle.style8
-                      ),
+                      Text(MyText.title12, style: MyTextStyle.style8),
                       SizedBox(
                         height: AppSize.z10,
                       ),
-                      Text(
-                       MyText.title13,
-                        style: MyTextStyle.style9
-                      ),
+                      Text(MyText.title13, style: MyTextStyle.style9),
                       SizedBox(
                         height: AppSize.z10,
                       ),
-                      Text(
-                        MyText.title14,
-                        style:MyTextStyle.style10
-                      ),
+                      Text(MyText.title14, style: MyTextStyle.style10),
                       SizedBox(
                         height: AppSize.z10,
                       ),
@@ -101,13 +82,13 @@ class _NextFatwasState extends State<NextFatwas> {
                         textAlign: TextAlign.end,
                       ),
                       SizedBox(
-                        height:AppSize.z10,
+                        height: AppSize.z10,
                       ),
                       Text(
                         MyText.title15,
-                        style:MyTextStyle.style10,
-                        ),
-                      
+                        style: MyTextStyle.style10,
+                      ),
+
                       SizedBox(
                         height: AppSize.z10,
                       ),

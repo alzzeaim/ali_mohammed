@@ -32,7 +32,7 @@ class CategoriesHomePage extends StatelessWidget {
         width: wi,
         height: AppSize.z124,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(AppPadding.p10),
+          borderRadius: BorderRadius.circular(AppSize.z10),
           color:MyColors.whiteColor,
         ),
         child: Column(

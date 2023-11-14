@@ -9,17 +9,17 @@ import 'package:flutter_alli_mohammed_hassan/screen/voice_file/next_voice.dart';
 import '../../widget/type_of_itme/itme_type1_new.dart';
 
 class RecentlyAddedVoices extends StatelessWidget {
-  const RecentlyAddedVoices({Key? key}) : super(key: key);
-
+  const RecentlyAddedVoices({Key? key, required this.isNew}) : super(key: key);
+  final bool isNew;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:MyColors.MyBackGround,
+      backgroundColor: MyColors.MyBackGround,
       body: SafeArea(
-        child: Stack(
+        child: Column(
           children: [
             ItmeType1New(
-              isNew: true,
+                isNew: isNew,
                 nextPage: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(

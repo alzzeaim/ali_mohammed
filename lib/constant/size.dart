@@ -15,6 +15,7 @@ class AppSize {
   static double z45 = 45.0;
   static double z50 = 50.0;
   static double z60 = 60.0;
+  static double z70 = 70.0;
   static double z75 = 75.0;
   static double z90 = 90.0;
   static double z100 = 100.0;

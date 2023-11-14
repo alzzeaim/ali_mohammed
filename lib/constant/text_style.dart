@@ -41,12 +41,12 @@ class MyTextStyle {
     fontWeight: FontWeight.w600,
   );
   static final style8 = TextStyle(
-    color: Colors.white,
+    color: Colors.black,
     fontWeight: FontWeight.w600,
     fontSize: 14,
   );
   static final style9 = TextStyle(
-    color: Colors.white,
+    color: Colors.grey,
     fontWeight: FontWeight.w600,
     fontSize: 16,
   );
@@ -151,9 +151,16 @@ class MyTextStyle {
     fontSize: AppSize.z16,
     fontWeight: FontWeight.w600,
   );
-   static final style30 = TextStyle(
+  static final style30 = TextStyle(
     color: MyColors.greyColor,
     fontSize: AppSize.z10,
     fontWeight: FontWeight.w600,
+  );
+
+  static final style31 = TextStyle(
+    // color:MyColors.whiteColor,
+    color: MyColors.whiteColor,
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
   );
 }

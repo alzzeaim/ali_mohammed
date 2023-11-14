@@ -6,7 +6,6 @@ import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 
-
 class inquiry extends StatelessWidget {
   const inquiry({Key? key}) : super(key: key);
 
@@ -20,11 +19,10 @@ class inquiry extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             color: MyColors.whiteColor,
-            borderRadius: BorderRadius.circular(AppPadding.p15),
+            borderRadius: BorderRadius.circular(AppSize.z15),
           ),
           child: Padding(
-            padding:  EdgeInsets.all(AppPadding.p15),
-            
+            padding: EdgeInsets.all(AppPadding.p15),
             child: Column(
               children: [
                 Text(
@@ -32,7 +30,7 @@ class inquiry extends StatelessWidget {
                   style: MyTextStyle.style3,
                 ),
                 Padding(
-                  padding:  EdgeInsets.only(top: AppPadding.p15),
+                  padding: EdgeInsets.only(top: AppPadding.p15),
                   child: SizedBox(
                     height: AppSize.z45,
                     child: TextFormField(
@@ -42,7 +40,7 @@ class inquiry extends StatelessWidget {
                         hintText: MyText.enterName,
                         hintStyle: MyTextStyle.style4,
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(AppPadding.p20),
+                            borderRadius: BorderRadius.circular(AppSize.z20),
                             borderSide: BorderSide.none),
                         filled: true,
                         fillColor: MyColors.grey200Color,
@@ -67,7 +65,7 @@ class inquiry extends StatelessWidget {
                       hintText: MyText.enterEmail,
                       hintStyle: MyTextStyle.style4,
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(AppPadding.p20),
+                        borderRadius: BorderRadius.circular(AppSize.z20),
                         borderSide: BorderSide.none,
                       ),
                       filled: true,
@@ -80,16 +78,16 @@ class inquiry extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding:  EdgeInsets.only(top: AppPadding.p20),
+                  padding: EdgeInsets.only(top: AppPadding.p20),
                   child: SizedBox(
                     height: AppSize.z45,
                     child: TextFormField(
                       textAlign: TextAlign.right,
                       decoration: InputDecoration(
                         hintText: MyText.enterPhone,
-                        hintStyle:MyTextStyle.style4,
+                        hintStyle: MyTextStyle.style4,
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(AppPadding.p20),
+                          borderRadius: BorderRadius.circular(AppSize.z20),
                           borderSide: BorderSide.none,
                         ),
                         filled: true,
@@ -108,16 +106,13 @@ class inquiry extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      MyText.theMessage,
-                      style:MyTextStyle.style5
-                    ),
+                    Text(MyText.theMessage, style: MyTextStyle.style5),
                     SizedBox(
                       width: AppSize.z10,
                     ),
                     Icon(
                       Icons.message_outlined,
-                      color:MyColors.grey500Color,
+                      color: MyColors.grey500Color,
                     )
                   ],
                 ),
@@ -131,11 +126,11 @@ class inquiry extends StatelessWidget {
                   decoration: InputDecoration(
                     hintStyle: MyTextStyle.style4,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(AppPadding.p20),
+                      borderRadius: BorderRadius.circular(AppSize.z20),
                       borderSide: BorderSide.none,
                     ),
                     filled: true,
-                    fillColor:MyColors.grey200Color,
+                    fillColor: MyColors.grey200Color,
                   ),
                 ),
                 Row(
@@ -143,14 +138,14 @@ class inquiry extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.all(AppMargin.m20),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: AppPadding.p20, vertical: AppPadding.p5),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: AppPadding.p20, vertical: AppPadding.p5),
                       decoration: BoxDecoration(
                           border: Border.all(
-                            color:MyColors.MyAction,
+                            color: MyColors.MyAction,
                             width: 2,
                           ),
-                          borderRadius: BorderRadius.circular(AppPadding.p20)),
+                          borderRadius: BorderRadius.circular(AppSize.z20)),
                       child: Text(MyText.thisCode),
                     ),
                     SizedBox(
@@ -159,10 +154,10 @@ class inquiry extends StatelessWidget {
                       child: TextFormField(
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                          hintText:MyText.ValidationCode,
+                          hintText: MyText.ValidationCode,
                           hintStyle: MyTextStyle.style4,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(AppPadding.p20),
+                            borderRadius: BorderRadius.circular(AppSize.z20),
                             borderSide: BorderSide.none,
                           ),
                           filled: true,
@@ -183,10 +178,7 @@ class inquiry extends StatelessWidget {
                         Icons.message_outlined,
                         color: Colors.white,
                       ),
-                      label: Text(
-                      MyText.send,
-                        style:MyTextStyle.style6
-                      )),
+                      label: Text(MyText.send, style: MyTextStyle.style6)),
                 )
               ],
             ),

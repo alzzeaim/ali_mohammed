@@ -29,7 +29,7 @@ class ViewTheReligiousAndArticles extends StatelessWidget {
                   imageMeneger.image6,
                 ),
                 fit: BoxFit.cover),
-            borderRadius: BorderRadius.circular(AppPadding.p20),
+            borderRadius: BorderRadius.circular(AppSize.z20),
           ),
         ),
         Container(
@@ -38,7 +38,7 @@ class ViewTheReligiousAndArticles extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             color:MyColors.whiteColor,
-            borderRadius: BorderRadius.circular(AppPadding.p20),
+            borderRadius: BorderRadius.circular(AppSize.z20),
           ),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -57,7 +57,7 @@ class ViewTheReligiousAndArticles extends StatelessWidget {
                   height: 2,
                   decoration: BoxDecoration(
                     color:MyColors.blackColor,
-                    borderRadius: BorderRadius.circular(AppPadding.p15),
+                    borderRadius: BorderRadius.circular(AppSize.z15),
                   ),
                 ),
                 SizedBox(

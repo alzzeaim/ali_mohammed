@@ -4,10 +4,10 @@ import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Articles_file/Articles_page.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Articles_file/View_the_article.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/type_of_itme/itme_type4_2_new.dart';
 
-import '../../widget/app_bar_actions.dart';
-import '../../widget/app_bar_title.dart';
+
 
 class NextArticles extends StatefulWidget {
   const NextArticles({super.key});
@@ -21,19 +21,15 @@ class _NextArticlesState extends State<NextArticles> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
-      appBar: AppBar(
-        leading: const SizedBox(),
-        title: const AppBarTitle(titel: MyText.title3),
-        actions: [
-          AppBarActions(backPage: () {
+      appBar: 
+      AppBarWidget.appBarWidgetTitle(Title: MyText.title3, backPage: () {
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => const ArticlesPage(),
               ),
             );
           }),
-        ],
-      ),
+     
       body: SafeArea(
         child: Column(
           children: [

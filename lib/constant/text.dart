@@ -120,7 +120,7 @@ class MyText {
   static const title38 = " روابط تهمك";
 
   // in_all_app
-  static const textGeneral1 = "المضاف مؤاخراً";
+  static const textOfTapBarl1 = "المضاف مؤاخراً";
 
   // type_of_itme
   static const textGeneral = "جديد";
@@ -130,5 +130,9 @@ class MyText {
   static const textGenera5 = "المزيد";
   static const textGenera6 = "تحميل";
   static const textGenera7 = "رجوع";
+  static const textGenera8 = "الحلقة";
+  static const textGenera9 = " من سلسلة";
+ 
+  
   // static const textGenera2 = "سلسة";
 }

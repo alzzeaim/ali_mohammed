@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/homePage.dart';
 
-class BottomBar extends StatefulWidget {
-  const BottomBar({super.key});
+import '../constant/size.dart';
+import '../widget/CategoriesHomePage.dart';
+
+class RootAppScreen extends StatefulWidget {
+  const RootAppScreen({super.key});
 
   @override
-  State<BottomBar> createState() => _BottomBarState();
+  State<RootAppScreen> createState() => _RootAppScreenState();
 }
 
-class _BottomBarState extends State<BottomBar> {
+class _RootAppScreenState extends State<RootAppScreen> {
   int currentIndex = 0;
   List<Widget> body = const [
     HomePage(),
@@ -21,62 +25,64 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      extendBodyBehindAppBar: true,
       body: Center(
         child: body[currentIndex],
       ),
-      bottomNavigationBar: Padding(
+      bottomNavigationBar: Container(
         padding: EdgeInsets.all(AppPadding.p15),
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(AppSize.z15),
           child: BottomNavigationBar(
-            backgroundColor: Colors.black,
-            fixedColor: Colors.blue,
-            selectedItemColor: Colors.amber,
-            unselectedItemColor: Colors.black,
-
-            // fixedColor: Colors.amber,
-            // useLegacyColorScheme: true,
-            // selectedItemColor: Colors.red,
-            // backgroundColor: Colors.amber,
-            // unselectedItemColor: Colors.teal,
+            elevation: 0.0,
+            selectedItemColor: MyColors.MyAction,
+            unselectedItemColor: Colors.grey,
+            backgroundColor: MyColors.whiteColor,
             currentIndex: currentIndex,
             onTap: (int newIndex) {
-              
               setState(() {
                 currentIndex = newIndex;
-
-                
               });
             },
-            items: const [
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home_outlined,
-                    color: Colors.grey,
-                  ),
-                  label: ""),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.search,
-                    color: Colors.grey,
-                  ),
-                  label: ""),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.file_download_outlined,
-                    color: Colors.grey,
-                  ),
-                  label: ""),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.settings_outlined,
-                    color: Colors.grey,
-                  ),
-                  label: ""),
-            ],
+            items: List.generate(
+              bootomBar.listItemBotoomBar.length,
+              (index) => BottomNavigationBarItem(
+                  icon: bootomBar.listItemBotoomBar[index]['icon'],
+                  label: bootomBar.listItemBotoomBar[index]['label']),
+            ),
           ),
         ),
       ),
     );
   }
+}
+
+class bootomBar {
+  static List<Map<String, dynamic>> listItemBotoomBar = [
+    {
+      'icon': Icon(
+        Icons.home_outlined,
+      ),
+      'label': ""
+    },
+    {
+      'icon': Icon(
+        Icons.search,
+      ),
+      'label': ""
+    },
+    {
+      'icon': Icon(
+        Icons.file_download_outlined,
+      ),
+      'label': ""
+    },
+    {
+      'icon': Icon(
+        Icons.settings_outlined,
+      ),
+      'label': ""
+    },
+  ];
 }

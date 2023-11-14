@@ -7,17 +7,18 @@ import '../../widget/type_of_itme/itme_type4_new.dart';
 import 'next_Religious_pearls.dart';
 
 class RecentlyAddedReligious extends StatelessWidget {
-  const RecentlyAddedReligious({Key? key}) : super(key: key);
-
+  const RecentlyAddedReligious({Key? key, required this.isNew})
+      : super(key: key);
+  final bool isNew;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
       body: SafeArea(
-        child: Stack(
+        child: Column(
           children: [
             ItmeType4New(
-              isNew: true,
+              isNew: isNew,
               URL3: imageMeneger.image6,
               decItme: MyText.title18,
               nextPage: () {

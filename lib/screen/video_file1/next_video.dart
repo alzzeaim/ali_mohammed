@@ -7,9 +7,8 @@ import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/video_file1/video_page.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
 
-import '../../widget/app_bar_actions.dart';
-import '../../widget/app_bar_title.dart';
 
 class NextVideo extends StatefulWidget {
   NextVideo({
@@ -32,21 +31,15 @@ class _NextVideoState extends State<NextVideo> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
-      appBar: AppBar(
-        leading: SizedBox(),
-        title: AppBarTitle(
-          titel: MyText.title21,
-        ),
-        actions: [
-          AppBarActions(backPage: () {
+      appBar: AppBarWidget.appBarWidgetTitle(
+          Title: MyText.title21,
+          backPage: () {
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => videoPage(),
               ),
             );
-          })
-        ],
-      ),
+          }),
       body: SafeArea(
         child: ListView.builder(
           itemCount: 3,
@@ -81,7 +74,7 @@ class ItmeOfVideos extends StatelessWidget {
       margin: EdgeInsets.all(AppMargin.m20),
       decoration: BoxDecoration(
         color: MyColors.whiteColor,
-        borderRadius: BorderRadius.circular(AppPadding.p20),
+        borderRadius: BorderRadius.circular(AppSize.z20),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -91,8 +84,8 @@ class ItmeOfVideos extends StatelessWidget {
             height: AppSize.z200,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(AppPadding.p20),
-                topRight: Radius.circular(AppPadding.p20),
+                topLeft: Radius.circular(AppSize.z20),
+                topRight: Radius.circular(AppSize.z20),
               ),
               border: Border.all(
                 color: MyColors.MyAction,
@@ -108,7 +101,7 @@ class ItmeOfVideos extends StatelessWidget {
             height: AppSize.z20,
           ),
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: AppPadding.p20),
+            padding: EdgeInsets.symmetric(horizontal: AppPadding.p20),
             child: Text(
               title1,
               style: MyTextStyle.style1,
@@ -116,15 +109,16 @@ class ItmeOfVideos extends StatelessWidget {
             ),
           ),
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal:AppPadding.p20),
+            padding: EdgeInsets.symmetric(horizontal: AppPadding.p20),
             child: Text(
-              " الحلقة $title2",
+              MyText.textGenera8 + title2,
               style: MyTextStyle.style1,
               textAlign: TextAlign.right,
             ),
           ),
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: AppPadding.p20, vertical: AppPadding.p15),
+            padding: EdgeInsets.symmetric(
+                horizontal: AppPadding.p20, vertical: AppPadding.p15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -135,24 +129,16 @@ class ItmeOfVideos extends StatelessWidget {
                   onPressed: () {},
                   icon: Icon(
                     Icons.shower_outlined,
-                    color:MyColors.whiteColor,
+                    color: MyColors.whiteColor,
                   ),
-                  label: Text(
-                    "شاهد",
-                    style: TextStyle(
-                      // color:MyColors.whiteColor,
-                      color: MyColors.MyAction,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                    ),
-                  ),
+                  label: Text(MyText.textGenera4, style: MyTextStyle.style31),
                 ),
                 SizedBox(
                   width: AppSize.z20,
                 ),
                 Expanded(
                   child: Text(
-                    "   من سلسلة$title3 ",
+                    MyText.textGenera9 + title3,
                     style: MyTextStyle.style2,
                     textAlign: TextAlign.right,
                   ),

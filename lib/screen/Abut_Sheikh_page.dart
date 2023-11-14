@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
@@ -8,9 +6,10 @@ import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
 
-import '../widget/app_bar_actions.dart';
 import 'Notifications.dart';
+import 'bottom_bar.dart';
 import 'homePage.dart';
 
 class AbutSheikhPage extends StatefulWidget {
@@ -22,81 +21,56 @@ class AbutSheikhPage extends StatefulWidget {
 
 class _AbutSheikhPageState extends State<AbutSheikhPage> {
   List myListTitle = [
-    {
-      'title':
-          MyText.title31
-    },
-    {
-      'title':
-          MyText.title32
-    },
-    {
-      'title':
-          MyText.title33
-    },
-    {
-      'title':
-         MyText.title34
-    },
-    {
-      'title':
-         MyText.title35
-    },
+    {'title': MyText.title31},
+    {'title': MyText.title32},
+    {'title': MyText.title33},
+    {'title': MyText.title34},
+    {'title': MyText.title35},
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
-      appBar: AppBar(
-        actions: [
-          AppBarActions(backPage: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const HomePage(),
-              ),
-            );
-          })
-        ],
-        title: Image(
-          image: AssetImage(imageMeneger.image1),
-        ),
-        leading: IconButton(
-          icon: const Icon(
-            Icons.notifications_active_outlined,
-          ),
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => Notifcations(),
-              ),
-            );
-          },
-        ),
+      appBar: AppBarWidget.appBarWidgetImageAndBackAndLeading(
+        URLImage: imageMeneger.image1,
+        icon: Icons.notifications_active_outlined,
+        nextPage: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => Notifcations(),
+            ),
+          );
+        },
+        backPage: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const RootAppScreen(),
+            ),
+          );
+        },
       ),
       body: SafeArea(
         child: Column(
           children: [
             Container(
               margin: EdgeInsets.all(AppMargin.m20),
-              padding: EdgeInsets.symmetric(horizontal: AppPadding.p30, vertical: AppPadding.p10),
+              padding: EdgeInsets.symmetric(
+                  horizontal: AppPadding.p30, vertical: AppPadding.p10),
               decoration: BoxDecoration(
-                color:MyColors.MyAction,
+                color: MyColors.MyAction,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(AppPadding.p20),
-                  topRight: Radius.circular(AppPadding.p20),
+                  bottomLeft: Radius.circular(AppSize.z20),
+                  topRight: Radius.circular(AppSize.z20),
                 ),
               ),
-              child: Text(
-                MyText.title36,
-                style:MyTextStyle.style15
-              ),
+              child: Text(MyText.title36, style: MyTextStyle.style15),
             ),
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color:MyColors.grey200Color,
-                  borderRadius: BorderRadius.circular(AppPadding.p20),
+                  color: MyColors.grey200Color,
+                  borderRadius: BorderRadius.circular(AppSize.z20),
                 ),
                 child: ListView.builder(
                   itemCount: myListTitle.length,
@@ -130,7 +104,7 @@ class ItemOfAbutSheikh extends StatelessWidget {
       height: AppSize.z100,
       decoration: BoxDecoration(
         color: MyColors.whiteColor,
-        borderRadius: BorderRadius.circular(AppPadding.p20),
+        borderRadius: BorderRadius.circular(AppSize.z20),
       ),
       child: Row(
         children: [
@@ -140,8 +114,8 @@ class ItemOfAbutSheikh extends StatelessWidget {
             decoration: BoxDecoration(
               color: MyColors.MyAction,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(AppPadding.p20),
-                bottomLeft: Radius.circular(AppPadding.p20),
+                topLeft: Radius.circular(AppSize.z20),
+                bottomLeft: Radius.circular(AppSize.z20),
               ),
             ),
             child: Icon(
@@ -151,7 +125,7 @@ class ItemOfAbutSheikh extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding:  EdgeInsets.all(AppPadding.p15),
+              padding: EdgeInsets.all(AppPadding.p15),
               child: Text(
                 dec_text,
                 style: MyTextStyle.style16,

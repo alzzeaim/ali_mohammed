@@ -31,7 +31,7 @@ class ItmeType5New extends StatelessWidget {
       height: AppSize.z430,
       decoration: BoxDecoration(
         color:MyColors.whiteColor,
-        borderRadius: BorderRadius.circular(AppPadding.p20),
+        borderRadius: BorderRadius.circular(AppSize.z20),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -47,8 +47,8 @@ class ItmeType5New extends StatelessWidget {
                 fit: BoxFit.none,
               ),
               borderRadius:  BorderRadius.only(
-                topLeft: Radius.circular(AppPadding.p20),
-                topRight: Radius.circular(AppPadding.p20),
+                topLeft: Radius.circular(AppSize.z20),
+                topRight: Radius.circular(AppSize.z20),
               ),
               
             ),
@@ -67,7 +67,7 @@ class ItmeType5New extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       color: MyColors.redAccentColor,
-                      borderRadius: BorderRadius.circular(AppPadding.p15),
+                      borderRadius: BorderRadius.circular(AppSize.z15),
                     ),
                     child: Text(MyText.textGeneral, style: MyTextStyle.style25),
                   ),
@@ -98,7 +98,7 @@ class ItmeType5New extends StatelessWidget {
                   height: AppSize.z30,
                   decoration: BoxDecoration(
                     color:MyColors.MyAction,
-                    borderRadius: BorderRadius.circular(AppPadding.p10),
+                    borderRadius: BorderRadius.circular(AppSize.z10),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

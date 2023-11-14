@@ -30,7 +30,7 @@ class ItmeType4_2New extends StatelessWidget {
       height: AppSize.z320,
       decoration: BoxDecoration(
         color:MyColors.whiteColor,
-        borderRadius: BorderRadius.circular(AppPadding.p20),
+        borderRadius: BorderRadius.circular(AppSize.z20),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,8 +45,8 @@ class ItmeType4_2New extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               borderRadius:  BorderRadius.only(
-                topLeft: Radius.circular(AppPadding.p20),
-                topRight: Radius.circular(AppPadding.p20),
+                topLeft: Radius.circular(AppSize.z20),
+                topRight: Radius.circular(AppSize.z20),
               ),
               border: Border.all(
                 color: MyColors.MyAction,
@@ -69,7 +69,7 @@ class ItmeType4_2New extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       color: MyColors.redAccentColor,
-                      borderRadius: BorderRadius.circular(AppPadding.p15),
+                      borderRadius: BorderRadius.circular(AppSize.z15),
                     ),
                     child:  Text(
                       MyText.textGeneral,
@@ -106,8 +106,8 @@ class ItmeType4_2New extends StatelessWidget {
               decoration:  BoxDecoration(
                 color:MyColors.MyAction,
                 borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(AppPadding.p20),
-                  bottomLeft: Radius.circular(AppPadding.p20),
+                  bottomRight: Radius.circular(AppSize.z20),
+                  bottomLeft: Radius.circular(AppSize.z20),
                 ),
               ),
               child: Center(

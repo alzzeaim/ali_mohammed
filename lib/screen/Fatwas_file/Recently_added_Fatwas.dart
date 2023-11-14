@@ -4,21 +4,20 @@ import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Fatwas_file/next_fatwas.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/type_of_itme/itme_type2_new.dart';
 
-
 class RecentlyAddedFatwas extends StatelessWidget {
-  const RecentlyAddedFatwas({Key? key}) : super(key: key);
+  const RecentlyAddedFatwas({Key? key, required this.isNew}) : super(key: key);
 
+  final bool isNew;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:MyColors.MyBackGround,
+      backgroundColor: MyColors.MyBackGround,
       body: SafeArea(
-        child: Stack(
+        child: Column(
           children: [
             ItmeType2New(
-              isNew: true,
-              title:
-                  MyText.title17,
+              isNew: isNew,
+              title: MyText.title17,
               nextPage: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(

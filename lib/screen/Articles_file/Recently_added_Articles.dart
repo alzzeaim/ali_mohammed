@@ -7,21 +7,21 @@ import 'package:flutter_alli_mohammed_hassan/screen/Articles_file/next_articels.
 import '../../widget/type_of_itme/itme_type3_new.dart';
 
 class RecentlyAddedArticles extends StatelessWidget {
-  const RecentlyAddedArticles({Key? key}) : super(key: key);
-
+  const RecentlyAddedArticles({Key? key, required this.isNew})
+      : super(key: key);
+  final bool isNew;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
       body: SafeArea(
-        child: Stack(
+        child: Column(
           children: [
             ItmeType3New(
-              isNew: true,
+              isNew: isNew,
               numItme: 15,
               URL3: imageMeneger.image2,
-              decItme:
-                 MyText.title4 ,
+              decItme: MyText.title4,
               nextPage: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(

@@ -3,10 +3,13 @@ import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/images.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/bottom_bar.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/call_us_file/contact_information.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/build_tab_bar_view.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/build_tab_bar_widget.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/list_tile_menu.dart';
 import '../../constant/text.dart';
-import '../../widget/tabbarPage.dart';
 import '../Abut_Sheikh_page.dart';
 import '../Articles_file/Articles_page.dart';
 import '../Books_and_publications_file/Books and publications_page.dart';
@@ -26,7 +29,14 @@ class CallUs extends StatefulWidget {
   State<CallUs> createState() => _CallUsState();
 }
 
-class _CallUsState extends State<CallUs> {
+class _CallUsState extends State<CallUs> with SingleTickerProviderStateMixin {
+  late TabController tabController;
+  @override
+  void initState() {
+    tabController = TabController(length: 2, vsync: this);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> mapdrawer = [
@@ -37,7 +47,7 @@ class _CallUsState extends State<CallUs> {
         'fun': () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => HomePage(),
+              builder: (context) => RootAppScreen(),
             ),
           );
         }
@@ -138,7 +148,7 @@ class _CallUsState extends State<CallUs> {
           );
         }
       },
-       {
+      {
         // CallUs
         'name': MyText.title39,
         'icon': Icons.phone_in_talk_outlined,
@@ -152,8 +162,19 @@ class _CallUsState extends State<CallUs> {
       },
     ];
     return Scaffold(
-      backgroundColor:MyColors.MyBackGround,
-       endDrawer: Drawer(
+      backgroundColor: MyColors.MyBackGround,
+      appBar: AppBarWidget.appBarWidgetImage(
+        URLImage: imageMeneger.image1,
+        icon: Icons.notifications_active_outlined,
+        backPage: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => Notifcations(),
+            ),
+          );
+        },
+      ),
+      endDrawer: Drawer(
         child: Container(
           height: AppSize.z400,
           color: MyColors.blackColor,
@@ -164,10 +185,9 @@ class _CallUsState extends State<CallUs> {
                   child: Container(
                       padding: EdgeInsets.all(AppPadding.p10),
                       decoration: BoxDecoration(
-                          color:MyColors.whiteColor,
-                          borderRadius: BorderRadius.circular(AppPadding.p10)),
-                      child:
-                          Image(image: AssetImage(imageMeneger.image1))),
+                          color: MyColors.whiteColor,
+                          borderRadius: BorderRadius.circular(AppSize.z10)),
+                      child: Image(image: AssetImage(imageMeneger.image1))),
                 ),
               ),
               ListView.builder(
@@ -180,43 +200,36 @@ class _CallUsState extends State<CallUs> {
                       movePage: mapdrawer[index]["fun"]);
                 },
               ),
-
-            
-              
-              
             ],
           ),
         ),
       ),
-      
-      appBar: AppBar(
-        title: Image(
-          image: AssetImage(imageMeneger.image1),
-        ),
-        leading: IconButton(
-          icon: const Icon(
-            Icons.notifications_active_outlined,
-          ),
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => Notifcations(),
-              ),
-            );
-          },
-        ),
-      ),
       body: SafeArea(
-        child: Stack(
+          child: Container(
+        height: MediaQuery.of(context).size.height,
+        child: Column(
           children: [
-            TabBarPage(
-                tap11: MyText.title43,
-                tap22: MyText.title44,
+            buildTabBar(
+              context: context,
+              tabController: tabController,
+              title1: MyText.title43,
+              title2: MyText.title43,
+              icon: Icons.wallet,
+            ),
+            buildTabBarView(
+                tabController: tabController,
                 page1: ContactInformation(),
                 page2: inquiry())
           ],
         ),
-      ),
+      )
+
+          // TabBarPage(
+          //     tap11: MyText.title43,
+          //     tap22: MyText.title44,
+          //     page1: ContactInformation(),
+          //     page2: inquiry()),
+          ),
     );
   }
 }

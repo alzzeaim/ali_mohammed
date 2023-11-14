@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
-import 'package:flutter_alli_mohammed_hassan/widget/appbar.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
 
 import '../../widget/View_The_Religious_And_Articles.dart';
 import 'Religious_pearls_page.dart';
@@ -20,8 +20,8 @@ class _NextReligiousPearlsState extends State<NextReligiousPearls> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
-      appBar: myAppBar(
-        tilte: MyText.title47,
+      appBar: AppBarWidget.appBarWidgetTitle(
+        Title: MyText.title47,
         backPage: () {
           Navigator.of(context).push(
             MaterialPageRoute(

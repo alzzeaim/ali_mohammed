@@ -7,18 +7,17 @@ import 'package:flutter_alli_mohammed_hassan/screen/video_file1/next_video.dart'
 import '../../widget/type_of_itme/itme_type1_new.dart';
 
 class RecentlyAddedVideos extends StatelessWidget {
-  const RecentlyAddedVideos({Key? key}) : super(key: key);
-
+  const RecentlyAddedVideos({Key? key, required this.isNew}) : super(key: key);
+  final bool isNew;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
       body: SafeArea(
-        child: Stack(
+        child: Column(
           children: [
             ItmeType1New(
-                isNew: true,
-                
+                isNew: isNew,
                 nextPage: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
@@ -28,9 +27,8 @@ class RecentlyAddedVideos extends StatelessWidget {
                 },
                 iconsItme: Icons.videocam_outlined,
                 numItme: 25,
-                URL2:imageMeneger.image4,
-                decItme:
-                    MyText.title22),
+                URL2: imageMeneger.image4,
+                decItme: MyText.title22),
           ],
         ),
       ),

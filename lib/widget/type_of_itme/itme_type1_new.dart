@@ -40,7 +40,7 @@ class ItmeType1New extends StatelessWidget {
         height: AppSize.z150,
         decoration: BoxDecoration(
           color:MyColors.whiteColor,
-          borderRadius: BorderRadius.circular(AppPadding.p15),
+          borderRadius: BorderRadius.circular(AppSize.z15),
         ),
         child: Padding(
           padding:  EdgeInsets.only(right: AppPadding.p10),
@@ -70,7 +70,7 @@ class ItmeType1New extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                 color: MyColors.redAccentColor,
-                                borderRadius: BorderRadius.circular(AppPadding.p15),
+                                borderRadius: BorderRadius.circular(AppSize.z15),
                               ),
                               child: Text(MyText.textGeneral,
                                   style: MyTextStyle.style17),
@@ -97,6 +97,7 @@ class ItmeType1New extends StatelessWidget {
                               color:MyColors.MyAction,
                               size: AppSize.z30,
                             ),
+                           
                              SizedBox(
                               width: AppSize.z90,
                             ),
@@ -111,7 +112,7 @@ class ItmeType1New extends StatelessWidget {
                               height: AppSize.z25,
                               decoration: BoxDecoration(
                                 color: MyColors.MyAction,
-                                borderRadius: BorderRadius.circular(AppPadding.p15),
+                                borderRadius: BorderRadius.circular(AppSize.z15),
                               ),
                               child: Center(
                                 child: Text(
@@ -133,7 +134,7 @@ class ItmeType1New extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(
                         color:MyColors.MyAction, width: AppSize.z2),
-                    borderRadius: BorderRadius.circular(AppPadding.p15),
+                    borderRadius: BorderRadius.circular(AppSize.z15),
                     image: DecorationImage(
                         image: AssetImage(URL2), fit: BoxFit.cover)),
               ),

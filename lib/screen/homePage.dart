@@ -12,10 +12,12 @@ import 'package:flutter_alli_mohammed_hassan/screen/Important_links.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Notifications.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/video_file1/video_page.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/voice_file/voice_page.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/list_tile_menu.dart';
 import '../widget/CategoriesHomePage.dart';
 import '../widget/slidre_image_home.dart';
 import 'Articles_file/Articles_page.dart';
+import 'Articles_file/next_articels.dart';
 import 'Books_and_publications_file/Books and publications_page.dart';
 import 'Fatwas_file/Fatwas_page.dart';
 import 'Religious pearls_file/Religious_pearls_page.dart';
@@ -42,7 +44,7 @@ class _HomePageState extends State<HomePage> {
         'fun': () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => HomePage(),
+              builder: (context) => RootAppScreen(),
             ),
           );
         }
@@ -158,6 +160,17 @@ class _HomePageState extends State<HomePage> {
     ];
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
+      appBar: AppBarWidget.appBarWidgetImage(
+        URLImage: imageMeneger.image1,
+        icon: Icons.notifications_active_outlined,
+        backPage: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => Notifcations(),
+            ),
+          );
+        },
+      ),
       endDrawer: Drawer(
         child: Container(
           height: AppSize.z400,
@@ -170,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                       padding: EdgeInsets.all(AppPadding.p10),
                       decoration: BoxDecoration(
                           color: MyColors.whiteColor,
-                          borderRadius: BorderRadius.circular(AppPadding.p10)),
+                          borderRadius: BorderRadius.circular(AppSize.z10)),
                       child: Image(image: AssetImage(imageMeneger.image1))),
                 ),
               ),
@@ -188,35 +201,41 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      appBar: AppBar(
-        title: Image(
-          image: AssetImage(imageMeneger.image1),
-        ),
-        leading: IconButton(
-          icon: const Icon(
-            Icons.notifications_active_outlined,
-          ),
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => BottomBar(),
-              ),
-            );
-          },
-        ),
-      ),
       body: SingleChildScrollView(
         child: SafeArea(
-          child: Stack(
+          child: Column(
             children: [
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    SliderImages(URL: imageMeneger.image6),
-                    SliderImages(URL: imageMeneger.image5),
-                    SliderImages(URL: imageMeneger.image4),
-                    SliderImages(URL: imageMeneger.image3),
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => NextArticles(),
+                            ),
+                          );
+                        },
+                        child: SliderImages(URL: imageMeneger.image6)),
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => NextArticles(),
+                            ),
+                          );
+                        },
+                        child: SliderImages(URL: imageMeneger.image5)),
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => NextArticles(),
+                            ),
+                          );
+                        },
+                        child: SliderImages(URL: imageMeneger.image4)),
                   ],
                 ),
               ),
@@ -224,117 +243,67 @@ class _HomePageState extends State<HomePage> {
                 margin: EdgeInsets.only(
                   left: AppMargin.m10,
                   right: AppMargin.m10,
-                  top: AppMargin.m240,
+                  top: AppMargin.m10,
                   bottom: AppMargin.m10,
                 ),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: MyColors.grey300Color,
-                  borderRadius: BorderRadius.circular(AppPadding.p15),
+                  borderRadius: BorderRadius.circular(AppSize.z15),
                 ),
                 child: Column(
                   children: [
                     Row(
-                      children: [
-                        CategoriesHomePage(
-                          iconn: Icons.insert_drive_file_outlined,
-                          name_cato: MyText.title9,
-                          newPage: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => FatwasPage(),
-                              ),
-                            );
-                          },
-                        ),
-                        CategoriesHomePage(
-                          iconn: Icons.mic_none,
-                          name_cato: MyText.title29,
-                          newPage: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => VoicePage(),
-                              ),
-                            );
-                          },
-                        ),
-                        CategoriesHomePage(
-                          iconn: Icons.videocam_outlined,
-                          name_cato: MyText.title23,
-                          newPage: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => const videoPage(),
-                              ),
-                            );
-                          },
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        CategoriesHomePage(
-                          iconn: Icons.phone_outlined,
-                          name_cato: MyText.title39,
-                          newPage: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => CallUs(),
-                              ),
-                            );
-                          },
-                        ),
-                        CategoriesHomePage(
-                          iconn: Icons.menu_book_rounded,
-                          name_cato: MyText.title1,
-                          newPage: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => const ArticlesPage(),
-                              ),
-                            );
-                          },
-                        ),
-                        CategoriesHomePage(
-                          iconn: Icons.person_pin_outlined,
-                          name_cato: MyText.title36,
-                          newPage: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => AbutSheikhPage(),
-                              ),
-                            );
-                          },
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        CategoriesHomePage(
-                          iconn: Icons.book_outlined,
-                          name_cato: MyText.title5,
-                          wi: 235,
+                      children: List.generate(
+                        HomeData.listRow1.length,
+                        (index) => CategoriesHomePage(
+                          iconn: HomeData.listRow1[index]['icon'],
+                          name_cato: HomeData.listRow1[index]['title'],
                           newPage: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    const BooksAndPublicationsPage(),
+                                    HomeData.listRow1[index]['page'],
                               ),
                             );
                           },
                         ),
-                        CategoriesHomePage(
-                          iconn: Icons.insert_drive_file_outlined,
-                          name_cato: MyText.title19,
+                      ),
+                    ),
+                    Row(
+                      children: List.generate(
+                        HomeData.listRow2.length,
+                        (index) => CategoriesHomePage(
+                          iconn: HomeData.listRow2[index]['icon'],
+                          name_cato: HomeData.listRow2[index]['title'],
                           newPage: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => ReligiousPearlsPage(),
+                                builder: (context) =>
+                                    HomeData.listRow2[index]['page'],
                               ),
                             );
                           },
                         ),
-                      ],
+                      ),
+                    ),
+                    Row(
+                      children: List.generate(
+                        HomeData.listRow3.length,
+                        (index) => CategoriesHomePage(
+                          wi: HomeData.listRow3[index]['width'],
+                          iconn: HomeData.listRow3[index]['icon'],
+                          name_cato: HomeData.listRow3[index]['title'],
+                          newPage: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    HomeData.listRow3[index]['page'],
+                              ),
+                            );
+                          },
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -345,4 +314,55 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+
+class HomeData {
+  static List<Map<String, dynamic>> listRow1 = [
+    {
+      'icon': Icons.insert_drive_file_outlined,
+      'title': MyText.title9,
+      'page': FatwasPage()
+    },
+    {
+      'icon': Icons.mic_none,
+      'title': MyText.title29,
+      'page': VoicePage(),
+    },
+    {
+      'icon': Icons.videocam_outlined,
+      'title': MyText.title23,
+      'page': videoPage(),
+    },
+  ];
+  static List<Map<String, dynamic>> listRow2 = [
+    {
+      'icon': Icons.phone_outlined,
+      'title': MyText.title39,
+      'page': CallUs(),
+    },
+    {
+      'icon': Icons.menu_book_rounded,
+      'title': MyText.title1,
+      'page': ArticlesPage(),
+    },
+    {
+      'icon': Icons.person_pin_outlined,
+      'title': MyText.title36,
+      'page': AbutSheikhPage(),
+    },
+  ];
+  static List<Map<String, dynamic>> listRow3 = [
+    {
+      'icon': Icons.book_outlined,
+      'title': MyText.title5,
+      'page': BooksAndPublicationsPage(),
+      'width': 235.0
+    },
+    {
+      'icon': Icons.insert_drive_file_outlined,
+      'title': MyText.title19,
+      'page': ReligiousPearlsPage(),
+      'width': 110.0
+    },
+  ];
 }
