@@ -8,6 +8,9 @@ class MyColors {
   static Color grey200Color = Colors.grey.shade200;
   static Color grey300Color = Colors.grey.shade300;
   static Color grey500Color = Colors.grey.shade500;
+  static Color backGroundSearch = Color.fromRGBO(248, 248, 248, 1);
+  static Color font_Of_Search = Color.fromRGBO(124, 124, 124, 1);
+  static Color color_Of_text = Color.fromRGBO(95, 95, 93, 1);
 
   static final MyBackGround = const Color.fromRGBO(238, 237, 232, 1);
   static final MyAction = Color.fromRGBO(148, 137, 74, 1);
@@ -15,4 +18,3 @@ class MyColors {
   static final grey_N_Color = Color.fromRGBO(119, 119, 119, 1);
   static final grey2_N_Color = Color.fromRGBO(102, 102, 102, 1);
 }
- 

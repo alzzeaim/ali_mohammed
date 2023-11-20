@@ -33,6 +33,13 @@ class _AbutSheikhPageState extends State<AbutSheikhPage> {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
       appBar: AppBarWidget.appBarWidgetImageAndBackAndLeading(
+        backPage2: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => RootAppScreen(),
+            ),
+          );
+        },
         URLImage: imageMeneger.image1,
         icon: Icons.notifications_active_outlined,
         nextPage: () {

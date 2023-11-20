@@ -132,7 +132,7 @@ class MyText {
   static const textGenera7 = "رجوع";
   static const textGenera8 = "الحلقة";
   static const textGenera9 = " من سلسلة";
- 
-  
+  static const searsh_about = "...بحث عن ";
+
   // static const textGenera2 = "سلسة";
 }

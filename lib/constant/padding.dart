@@ -2,6 +2,7 @@ class AppPadding {
   static double p5 = 5.0;
   static double p2 = 2.0;
   static double p4 = 4.0;
+  static double p8 = 8.0;
   static double p10 = 10.0;
    static double p11 = 11.0;
    static double p12 = 12.0;

@@ -30,6 +30,7 @@ class _RootAppScreenState extends State<RootAppScreen> {
       body: Center(
         child: body[currentIndex],
       ),
+      
       bottomNavigationBar: Container(
         padding: EdgeInsets.all(AppPadding.p15),
         child: ClipRRect(

@@ -7,9 +7,9 @@ import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Fatwas_file/Fatwas_page.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/bottom_bar.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
-
-
+import 'package:flutter_alli_mohammed_hassan/widget/top_search_widget.dart';
 
 class NextFatwas extends StatefulWidget {
   const NextFatwas({super.key});
@@ -24,6 +24,13 @@ class _NextFatwasState extends State<NextFatwas> {
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
       appBar: AppBarWidget.appBarWidgetImageAndBack(
+          backPage2: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => RootAppScreen(),
+              ),
+            );
+          },
           URLImage: imageMeneger.image1,
           backPage: () {
             Navigator.of(context).push(

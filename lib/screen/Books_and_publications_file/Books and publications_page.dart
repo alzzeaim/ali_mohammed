@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Books_and_publications_file/Recently_added_Books.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/top_search_widget.dart';
 
 import '../../constant/padding.dart';
 import '../../constant/size.dart';
@@ -29,6 +31,7 @@ class _BooksAndPublicationsPageState extends State<BooksAndPublicationsPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: MyColors.MyBackGround,
       appBar: AppBarWidget.appBarWidgetTitle(
           Title: MyText.title6,
           backPage: () {
@@ -39,28 +42,27 @@ class _BooksAndPublicationsPageState extends State<BooksAndPublicationsPage>
             );
           }),
       // body: SafeArea(child: Text("Fatwas_page")),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: AppPadding.p10),
-          child: Container(
-            height: MediaQuery.of(context).size.height,
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                SizedBox(height: AppSize.z20),
-                buildTabBar(
-                    icon: Icons.wallet,
-                    context: context,
-                    tabController: tabController,
-                    title2: MyText.title5),
-                buildTabBarView(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: AppPadding.p10),
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              TopSearchWidget(),
+              SizedBox(height: AppSize.z20),
+              buildTabBar(
+                  icon: Icons.wallet,
+                  context: context,
                   tabController: tabController,
-                  page1: RecentlyAddedBooks(isNew: true),
-                  page2: RecentlyAddedBooks(isNew: false),
-                )
-              ],
-            ),
+                  title2: MyText.title5),
+              buildTabBarView(
+                tabController: tabController,
+                page1: RecentlyAddedBooks(isNew: true),
+                page2: RecentlyAddedBooks(isNew: false),
+              )
+            ],
           ),
         ),
       ),

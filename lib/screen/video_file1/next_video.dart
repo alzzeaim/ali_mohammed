@@ -8,7 +8,7 @@ import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text_style.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/video_file1/video_page.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
-
+import 'package:flutter_alli_mohammed_hassan/widget/top_search_widget.dart';
 
 class NextVideo extends StatefulWidget {
   NextVideo({
@@ -41,14 +41,21 @@ class _NextVideoState extends State<NextVideo> {
             );
           }),
       body: SafeArea(
-        child: ListView.builder(
-          itemCount: 3,
-          itemBuilder: (BuildContext context, int index) {
-            return ItmeOfVideos(
-                title1: titles[0]["title1"],
-                title2: titles[0]["title2"],
-                title3: titles[0]["title3"]);
-          },
+        child: Column(
+          children: [
+            TopSearchWidget(),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 3,
+                itemBuilder: (BuildContext context, int index) {
+                  return ItmeOfVideos(
+                      title1: titles[0]["title1"],
+                      title2: titles[0]["title2"],
+                      title3: titles[0]["title3"]);
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -128,7 +135,7 @@ class ItmeOfVideos extends StatelessWidget {
                   ),
                   onPressed: () {},
                   icon: Icon(
-                    Icons.shower_outlined,
+                    Icons.remove_red_eye_outlined,
                     color: MyColors.whiteColor,
                   ),
                   label: Text(MyText.textGenera4, style: MyTextStyle.style31),

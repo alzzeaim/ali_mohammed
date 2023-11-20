@@ -134,7 +134,7 @@ class MyTextStyle {
   );
   // appbar
   static final style26 = TextStyle(
-    color: Colors.grey,
+    color: MyColors.color_Of_text,
     fontSize: 16,
     fontWeight: FontWeight.w600,
   );
@@ -152,7 +152,7 @@ class MyTextStyle {
     fontWeight: FontWeight.w600,
   );
   static final style30 = TextStyle(
-    color: MyColors.greyColor,
+    color: MyColors.color_Of_text,
     fontSize: AppSize.z10,
     fontWeight: FontWeight.w600,
   );

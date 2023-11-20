@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_alli_mohammed_hassan/screen/bottom_bar.dart';
-import 'package:flutter_alli_mohammed_hassan/screen/homePage.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/search_page.dart';
+
+import 'screen/bottom_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const RootAppScreen(),
+      home: const SearchPage(),
     );
   }
 }
-

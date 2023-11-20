@@ -27,7 +27,7 @@ class ItmeType3New extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin:  EdgeInsets.all(AppMargin.m15),
+      margin: EdgeInsets.only(left: 15, right: 15, top: 20, bottom: 15),
       width: AppSize.z191N,
       height: AppSize.z288,
       decoration: BoxDecoration(
@@ -45,41 +45,41 @@ class ItmeType3New extends StatelessWidget {
                 image: AssetImage(URL3),
                 fit: BoxFit.cover,
               ),
-              borderRadius:  BorderRadius.only(
+              borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(AppSize.z20),
                 topRight: Radius.circular(AppSize.z20),
               ),
               border: Border.all(
-                color:MyColors.MyAction,
+                color: MyColors.MyAction,
                 width: AppPadding.p2,
               ),
             ),
             child: Column(
               children: [
-                if(isNew)
-                Container(
-                  margin: EdgeInsets.only(
-                    left: AppMargin.m10,
-                    top: AppMargin.m10,
+                if (isNew)
+                  Container(
+                    margin: EdgeInsets.only(
+                      left: AppMargin.m10,
+                      top: AppMargin.m10,
+                    ),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: AppPadding.p4,
+                      vertical: AppPadding.p2,
+                    ),
+                    decoration: BoxDecoration(
+                      color: MyColors.redAccentColor,
+                      borderRadius: BorderRadius.circular(AppSize.z15),
+                    ),
+                    child: Text(
+                      MyText.textGeneral,
+                      style: MyTextStyle.style17,
+                    ),
                   ),
-                  padding:  EdgeInsets.symmetric(
-                    horizontal: AppPadding.p4,
-                    vertical: AppPadding.p2,
-                  ),
-                  decoration: BoxDecoration(
-                    color:MyColors.redAccentColor,
-                    borderRadius: BorderRadius.circular(AppSize.z15),
-                  ),
-                  child:  Text(
-                    MyText.textGeneral,
-                    style:MyTextStyle.style17,
-                  ),
-                ),
               ],
             ),
           ),
           Padding(
-            padding:  EdgeInsets.all(AppPadding.p10),
+            padding: EdgeInsets.all(AppPadding.p10),
             child: Row(
               children: [
                 Container(
@@ -90,26 +90,20 @@ class ItmeType3New extends StatelessWidget {
                     borderRadius: BorderRadius.circular(AppSize.z50),
                   ),
                   child: Center(
-                    child: Text(
-                      numItme.toString(),
-                      style: MyTextStyle.style20
-                    ),
+                    child: Text(numItme.toString(), style: MyTextStyle.style20),
                   ),
                 ),
-                 SizedBox(
+                SizedBox(
                   width: AppSize.z10,
                 ),
-                 Icon(
+                Icon(
                   Icons.menu_book_rounded,
                   color: MyColors.black_N_Color,
                 ),
-                 SizedBox(
+                SizedBox(
                   width: AppSize.z75,
                 ),
-                 Text(
-                  MyText.textGenera2,
-                  style: MyTextStyle.style18
-                ),
+                Text(MyText.textGenera2, style: MyTextStyle.style18),
               ],
             ),
           ),
@@ -121,7 +115,7 @@ class ItmeType3New extends StatelessWidget {
               textAlign: TextAlign.right,
             ),
           ),
-           SizedBox(
+          SizedBox(
             height: AppSize.z11,
           ),
           Row(
@@ -131,14 +125,14 @@ class ItmeType3New extends StatelessWidget {
                   nextPage();
                 },
                 child: Container(
-                  padding:  EdgeInsets.only(
+                  padding: EdgeInsets.only(
                     left: AppPadding.p5,
                     right: AppPadding.p10,
                     top: AppPadding.p5,
                     bottom: AppPadding.p5,
                   ),
-                  decoration:  BoxDecoration(
-                    color:MyColors.MyAction,
+                  decoration: BoxDecoration(
+                    color: MyColors.MyAction,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(AppSize.z20),
                       bottomLeft: Radius.circular(AppSize.z20),
@@ -152,7 +146,7 @@ class ItmeType3New extends StatelessWidget {
                           color: MyColors.whiteColor,
                         ),
                         Text(
-                         MyText.textGenera4,
+                          MyText.textGenera4,
                           style: MyTextStyle.style21,
                           textAlign: TextAlign.right,
                         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/video_file1/Recently_added_videos.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
@@ -7,6 +8,7 @@ import '../../constant/padding.dart';
 import '../../constant/size.dart';
 import '../../widget/build_tab_bar_view.dart';
 import '../../widget/build_tab_bar_widget.dart';
+import '../../widget/top_search_widget.dart';
 import '../bottom_bar.dart';
 
 class videoPage extends StatefulWidget {
@@ -28,6 +30,7 @@ class _videoPageState extends State<videoPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: MyColors.MyBackGround,
       appBar: AppBarWidget.appBarWidgetTitle(
           Title: MyText.title23,
           backPage: () {
@@ -39,28 +42,27 @@ class _videoPageState extends State<videoPage>
           }),
 
       // body: SafeArea(child: Text("video_page")),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: AppPadding.p10),
-          child: Container(
-            height: MediaQuery.of(context).size.height,
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                SizedBox(height: AppSize.z20),
-                buildTabBar(
-                    icon: Icons.wallet,
-                    context: context,
-                    tabController: tabController,
-                    title2: MyText.title23),
-                buildTabBarView(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: AppPadding.p10),
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              TopSearchWidget(),
+              SizedBox(height: AppSize.z20),
+              buildTabBar(
+                  icon: Icons.wallet,
+                  context: context,
                   tabController: tabController,
-                  page1: RecentlyAddedVideos(isNew: true),
-                  page2: RecentlyAddedVideos(isNew: false),
-                )
-              ],
-            ),
+                  title2: MyText.title23),
+              buildTabBarView(
+                tabController: tabController,
+                page1: RecentlyAddedVideos(isNew: true),
+                page2: RecentlyAddedVideos(isNew: false),
+              )
+            ],
           ),
         ),
       ),

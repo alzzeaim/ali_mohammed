@@ -5,7 +5,7 @@ import 'package:flutter_alli_mohammed_hassan/constant/margin.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/size.dart';
 
-import '../constant/text.dart';
+
 import '../constant/text_style.dart';
 
 class ViewTheReligiousAndArticles extends StatelessWidget {

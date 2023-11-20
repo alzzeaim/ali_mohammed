@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/text.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/Articles_file/Recently_added_Articles.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/bottom_bar.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
+import 'package:flutter_alli_mohammed_hassan/widget/top_search_widget.dart';
 
 import '../../constant/padding.dart';
 import '../../constant/size.dart';
@@ -30,6 +32,7 @@ class _ArticlesPageState extends State<ArticlesPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: MyColors.MyBackGround,
         appBar: AppBarWidget.appBarWidgetTitle(
           Title: MyText.title1,
           backPage: () {
@@ -40,30 +43,31 @@ class _ArticlesPageState extends State<ArticlesPage>
             );
           },
         ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppPadding.p10),
-            child: Container(
-              height: MediaQuery.of(context).size.height,
-              child: Column(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                // crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  SizedBox(height: AppSize.z20),
-                  buildTabBar(
-                    icon: Icons.ac_unit,
-                    context: context,
-                    tabController: tabController,
-                    title2: MyText.title1,
-                  ),
-                  buildTabBarView(
-                    tabController: tabController,
-                    page1: RecentlyAddedArticles(isNew: true),
-                    page2: RecentlyAddedArticles(isNew: false),
-                  )
-                ],
+        body: Container(
+          height: MediaQuery.of(context).size.height,
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Padding(
+                padding:  EdgeInsets.only(
+                  left: AppPadding.p10,
+                ),
+                child: TopSearchWidget(),
               ),
-            ),
+              SizedBox(height: AppSize.z20),
+              buildTabBar(
+                icon: Icons.ac_unit,
+                context: context,
+                tabController: tabController,
+                title2: MyText.title1,
+              ),
+              buildTabBarView(
+                tabController: tabController,
+                page1: RecentlyAddedArticles(isNew: true),
+                page2: RecentlyAddedArticles(isNew: false),
+              )
+            ],
           ),
         ));
   }
