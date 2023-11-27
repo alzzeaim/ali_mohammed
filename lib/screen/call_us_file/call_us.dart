@@ -10,6 +10,7 @@ import 'package:flutter_alli_mohammed_hassan/widget/build_tab_bar_view.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/build_tab_bar_widget.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/list_tile_menu.dart';
 import '../../constant/text.dart';
+import '../../widget/drawer_widget.dart';
 import '../Abut_Sheikh_page.dart';
 import '../Articles_file/Articles_page.dart';
 import '../Books_and_publications_file/Books and publications_page.dart';
@@ -59,34 +60,28 @@ class _CallUsState extends State<CallUs> with SingleTickerProviderStateMixin {
           );
         },
       ),
-      endDrawer:DrawerWidget.drawerWidget(context),
+      endDrawer: DrawerWidget.drawerWidget(context),
       body: SafeArea(
-          child: Container(
-        padding: EdgeInsets.only(top: AppPadding.p30),
-        height: MediaQuery.of(context).size.height,
-        child: Column(
-          children: [
-            buildTabBar(
-              context: context,
-              tabController: tabController,
-              title1: MyText.title43,
-              title2: MyText.title43,
-              icon: Icons.wallet,
-            ),
-            buildTabBarView(
+        child: Container(
+          padding: EdgeInsets.only(top: AppPadding.p30),
+          height: MediaQuery.of(context).size.height,
+          child: Column(
+            children: [
+              buildTabBar(
+                context: context,
                 tabController: tabController,
-                page1: ContactInformation(),
-                page2: inquiry())
-          ],
-        ),
-      )
-
-          // TabBarPage(
-          //     tap11: MyText.title43,
-          //     tap22: MyText.title44,
-          //     page1: ContactInformation(),
-          //     page2: inquiry()),
+                title1: MyText.title43,
+                title2: MyText.title43,
+                icon: Icons.wallet,
+              ),
+              buildTabBarView(
+                  tabController: tabController,
+                  page1: ContactInformation(),
+                  page2: inquiry())
+            ],
           ),
+        ),
+      ),
     );
   }
 }

@@ -3,6 +3,7 @@ class AppSize {
   static double z5 = 5.0;
   static double z10 = 10.0;
   static double z11 = 11.0;
+  static double z12 = 12.0;
   static double z14 = 14.0;
   static double z15 = 15.0;
   static double z16 = 16.0;
@@ -27,6 +28,7 @@ class AppSize {
   static double z150 = 150.0;
   static double z180 = 180.0;
   static double z191N = 191.5;
+  static double z195 = 195;
   static double z200 = 200.0;
   static double z210 = 210.0;
   static double z220 = 220.0;

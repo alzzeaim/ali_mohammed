@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/colors.dart';
 import 'package:flutter_alli_mohammed_hassan/constant/padding.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/downlode_page.dart';
 import 'package:flutter_alli_mohammed_hassan/screen/homePage.dart';
+import 'package:flutter_alli_mohammed_hassan/screen/search_page.dart';
 
 import '../constant/size.dart';
 import '../widget/CategoriesHomePage.dart';
@@ -18,8 +20,8 @@ class _RootAppScreenState extends State<RootAppScreen> {
   List<Widget> body = const [
     HomePage(),
     // Icon(Icons.home_outlined),
-    Icon(Icons.ac_unit_outlined),
-    Icon(Icons.file_download_outlined),
+    SearchPage(),
+    DownloedPage(),
     Icon(Icons.settings_outlined),
   ];
   @override
@@ -30,7 +32,6 @@ class _RootAppScreenState extends State<RootAppScreen> {
       body: Center(
         child: body[currentIndex],
       ),
-      
       bottomNavigationBar: Container(
         padding: EdgeInsets.all(AppPadding.p15),
         child: ClipRRect(

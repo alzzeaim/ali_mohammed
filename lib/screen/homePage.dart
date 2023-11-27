@@ -15,6 +15,7 @@ import 'package:flutter_alli_mohammed_hassan/screen/voice_file/voice_page.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/app_bar_widget.dart';
 import 'package:flutter_alli_mohammed_hassan/widget/list_tile_menu.dart';
 import '../widget/CategoriesHomePage.dart';
+import '../widget/drawer_widget.dart';
 import '../widget/slidre_image_home.dart';
 import 'Articles_file/Articles_page.dart';
 import 'Articles_file/next_articels.dart';
@@ -36,128 +37,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    // List<Map<String, dynamic>> mapdrawer = [
-    //   {
-    //     // homee
-    //     'name': MyText.title37,
-    //     'icon': Icons.home,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => RootAppScreen(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    //   {
-    //     // AbutSheikhPage
-    //     'name': MyText.title36,
-    //     'icon': Icons.person_pin_outlined,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => AbutSheikhPage(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    //   {
-    //     // videoPage
-    //     'name': MyText.title23,
-    //     'icon': Icons.videocam_outlined,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => videoPage(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    //   {
-    //     // VoicePage
-    //     'name': MyText.title29,
-    //     'icon': Icons.mic_none_rounded,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => VoicePage(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    //   {
-    //     // FatwasPage
-    //     'name': MyText.title9,
-    //     'icon': Icons.insert_drive_file_outlined,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => FatwasPage(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    //   {
-    //     // ArticlesPage
-    //     'name': MyText.title1,
-    //     'icon': Icons.menu_book_rounded,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => ArticlesPage(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    //   {
-    //     // ReligiousPearlsPage
-    //     'name': MyText.title19,
-    //     'icon': Icons.insert_drive_file_outlined,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => ReligiousPearlsPage(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    //   {
-    //     // BooksAndPublicationsPage
-    //     'name': MyText.title5,
-    //     'icon': Icons.book_outlined,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => BooksAndPublicationsPage(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    //   {
-    //     // Important_links
-    //     'name': MyText.title38,
-    //     'icon': Icons.link_rounded,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => Important_links(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    //   {
-    //     // CallUs
-    //     'name': MyText.title39,
-    //     'icon': Icons.phone_in_talk_outlined,
-    //     'fun': () {
-    //       Navigator.of(context).push(
-    //         MaterialPageRoute(
-    //           builder: (context) => CallUs(),
-    //         ),
-    //       );
-    //     }
-    //   },
-    // ];
+    
     return Scaffold(
       backgroundColor: MyColors.MyBackGround,
       appBar: AppBarWidget.appBarWidgetImage(

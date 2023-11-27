@@ -40,7 +40,7 @@ class _NextVoiceState extends State<NextVoice> {
             child: ListView.builder(
               itemCount: 8,
               itemBuilder: (BuildContext context, int index) {
-                return ItemOfVoice();
+                return ItemOfVoice(icona:Icons.file_download_outlined,);
               },
             ),
           ),

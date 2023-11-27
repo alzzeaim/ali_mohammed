@@ -151,7 +151,7 @@ class MyTextStyle {
     fontSize: AppSize.z16,
     fontWeight: FontWeight.w600,
   );
-  static final style30 = TextStyle(
+  static final style30 = TextStyle( 
     color: MyColors.color_Of_text,
     fontSize: AppSize.z10,
     fontWeight: FontWeight.w600,
@@ -163,4 +163,6 @@ class MyTextStyle {
     fontWeight: FontWeight.w600,
     fontSize: 14,
   );
+  static final style32 =
+      TextStyle(fontSize: AppSize.z10, fontWeight: FontWeight.w600);
 }

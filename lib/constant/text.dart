@@ -129,8 +129,11 @@ class MyText {
   static const textGenera4 = " مشاهدة";
   static const textGenera5 = "المزيد";
   static const textGenera6 = "تحميل";
+  static const downloed = "التنزيلات";
   static const textGenera7 = "رجوع";
   static const textGenera8 = "الحلقة";
+  static const list_Of_search = "سجل البحث";
+  static const removeAll = "مسح الكل";
   static const textGenera9 = " من سلسلة";
   static const searsh_about = "...بحث عن ";
 

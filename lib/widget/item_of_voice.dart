@@ -8,29 +8,31 @@ import '../constant/text.dart';
 import '../constant/text_style.dart';
 
 class ItemOfVoice extends StatelessWidget {
-  const ItemOfVoice({
+  IconData icona;
+  ItemOfVoice({
     super.key,
+    required this.icona,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: AppMargin.m10, horizontal: AppMargin.m15),
+      margin: EdgeInsets.symmetric(
+          vertical: AppMargin.m10, horizontal: AppMargin.m15),
       width: double.infinity,
       height: AppSize.z100,
       decoration: BoxDecoration(
-        color:MyColors.whiteColor,
+        color: MyColors.whiteColor,
         borderRadius: BorderRadius.circular(AppSize.z15),
       ),
       child: Row(
         children: [
           Padding(
-            padding:  EdgeInsets.all(AppPadding.p15),
+            padding: EdgeInsets.all(AppPadding.p15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Icon(Icons.file_download_outlined,
-                    size: AppSize.z26, color: MyColors.MyAction),
+                Icon(icona, size: AppSize.z26, color: MyColors.MyAction),
               ],
             ),
           ),
@@ -89,7 +91,7 @@ class ItemOfVoice extends StatelessWidget {
             width: AppSize.z10,
           ),
           Padding(
-            padding:  EdgeInsets.only(right: AppPadding.p10),
+            padding: EdgeInsets.only(right: AppPadding.p10),
             child: Icon(
               Icons.mic_none_rounded,
               size: AppSize.z24,
